@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<!--
+  v9.1 · Shift-matched 1:1 added — Aug 17, 2026 (PHT, night)
+  New table in the ARIA section: every presales agent grouped by SHIFT
+  (EM · MID · GY) with each tester placed against their own shift only.
+  Shifts verified two ways per the standing rule - the live Presale Agents
+  Schedule sheet (XV tab: EM Jeannie/Ferrie/Jhem · MID Paris/Arla/Luiz/Estie
+  · GY Harold/Jorie/Nick/Otzi; Audrey+Mabel MID outbound) AND mean ticket
+  hour from the tracker (EM 10.3-10.8 · MID 18.2-18.7 · GY circular-mean
+  1.8-2.2 after the midnight-wrap correction). The testers are in NO
+  schedule or attendance record, so their shift is labelled inferred from
+  ticket hour alone (Johanne 10.8 -> EM · Mike 18.3 -> MID).
+  The 1:1 finding: Mike out-uses his own MID presales cohort 51.1% vs 15.5%
+  strict (3.3x, the widest usage gap in the fleet) and still converts 5.19%
+  vs a MID band of 20.99-26.42%; Johanne uses ARIA slightly BELOW her EM
+  cohort (20.5 vs 24.9) and converts 0.00% vs an EM band of 19.31-19.99.
+  Opposite sides of the usage question, same place on outcomes - the
+  strongest available evidence that usage intensity is not the driver.
+  GY shown for completeness (Harold 45.6% usage + best Aug conv 27.37%;
+  Otzi 27.5% usage + worst 16.93%) - no monotonic relationship on any shift.
+  v9 · Per-tester spectrum + recursive reconciliation — Aug 17, 2026 (PHT, night)
+  1. Johanne and Mike now each carry their own row in the usage table, their
+     own pilot row (window, $, per-ticket, YTD BAU-selling context) and a NEW
+     spectrum chart placing each tester against the full presales XV-11 band
+     (min - median - max) on five rubrics: strict/broad adoption (all + sales
+     context), Aug-window conversion (presales Aug 1-16: 16.9 / 24.0 / 27.4
+     vs J 0.00 / M 5.19), and pilot-week $ per ticket (peers 17.66 / 21.62 /
+     31.01 vs J $0.00 / M $4.44). The clean read: both testers >= presales
+     median on every usage rubric (Mike above the presales MAX on all four);
+     both below the presales MIN on every outcome rubric. No holdout - the
+     gap stays descriptive.
+  2. Full recursive reconciliation run over every section. Recomputed and
+     CONFIRMED: all 4 tiles; all 32 conversion rows (rates, order strictly
+     by exact rate); all 31 gross seats from the live log (#1 Jorie
+     $16,635.70, #7 Peejay $8,906.30); power order + every tie chain;
+     dual-top-7 star set = {Harold, Jorie, Peejay}; every ARIA cohort
+     aggregate reply-weighted from the per-agent tables; all five spectrum
+     bands (medians of the XV-11); both era-chart series recomputed from the
+     page's own grid data; pilot rates (Mike 5.19%, $2.75/tkt; Johanne
+     0.00%); revoked share 8.15% -> 8.2%; and no graph scale clips a value
+     (srm 1,846 of 2,000 · era 39.1 of 45 · ob 7,948 of 9,000).
+     Two PROSE defects found and fixed: the power-board desc still claimed
+     "Harold and Jorie are the only agents top-7 on both boards" (v8's
+     gross re-rank made it three - Peejay), and the gross-board foot still
+     printed the #N/A row at the Aug-14 value ($97.69 -> $110.68).
+     Sources unchanged since the evening pulls (SR 11,805 / tickets <=
+     Aug 16 / live log through Aug 17 / ARIA 6:20 PM / OB live).
+  v8 · One graph per section + full live refresh — Aug 17, 2026 (PHT, evening)
+  1. Every section now carries exactly one graph: bridge ladder (existing) ·
+     SR-consolidated monthly combo (sales bars + gross line, the page's own
+     table) · power dumbbell · conversion bars · gross bars · monthly rank
+     heat-matrix · ARIA era-divide line chart (NEW - see below) · outbound
+     monthly stacked bars · full table (tabular by nature).
+  2. ARIA era chart: XV Presale vs XV BAU monthly conversion, read directly
+     off the SR page's own conversion-grid charts (sub-month basis, one
+     instrument family), with era bands - Co-Pilot standalone (Mar 1 launch,
+     6 XV pilot agents) -> Co-Pilot inside ARIA (platform window opened
+     Jul 16) -> BAU tester pilot (Aug 4, Johanne + Mike). Annotated with each
+     cohort's ARIA usage (testers 42.7% strict vs presales 23.8%) and the
+     honest reads: the XV Jun->Jul dip is the FIFA promo-cycle rate effect
+     (pre-dates ARIA), and BAU's Jul->Aug drop rides a thinning lane
+     (43/316 -> 13/263) with no holdout - never causal.
+  3. Payout dollars re-pulled LIVE from the unified log (gviz, in-page
+     aggregation; filings through Aug 17): tiles now filed $190,184.65 =
+     kept $148,483.08 + revoked $13,178.18 (8.2%) + pending $28,523.39;
+     units 2,670.5 = 2,431.5 validated + 239 pending. Gross board re-ranked:
+     Peejay takes gross #7 (breaking the XV sweep) -> power podium Harold
+     2.5 · Jorie 3.0 · Peejay 4.0; three dual top-7 stars now (Harold,
+     Jorie, Peejay). Jorie gross $16,635.70. #N/A pending grew to $110.68.
+     The live sheet added two tracking columns (Discount/Extension,
+     Single-Country) vs the Aug-14 export - gviz letters remapped.
+  4. Outbound lane live: Aug MTD 7 deals, $1,954.31 booked + 3 VPN subs
+     awaiting amounts (floor marked with "+"); lane 49 deals / $19,731.63+.
+     The live tab now carries only the open month - the Aug-14 export is
+     the archive for May-Jul (same pattern as the ticket tab; flagged).
+  5. Conversion side unchanged (SR feed static all day at 11,805 rows;
+     tickets max Aug 16) - seats, monthly matrix and bridge stand.
+  v7 (superseded) - ARIA section added - Aug 17, 2026 (PHT)
+  New card: "ARIA — usage and its read on conversion, BAU vs presales."
+  Sources: ARIA Lab /analytics live pull (XV, production, all-time since
+  Jul 16): adoption 29.9% (18,341/61,262 replies; sales-context 39.6% =
+  2,525/6,374), reply adoption 41/30/29, helpful 79%, QA 87/6/7, cost
+  $721.5929 ($0.0312/response, $0.0601/ticket; Lab tooling $271.9405),
+  speed 10.2s (p50 9.3 / p90 15.4), coverage 17,075/24,079, 0 failures /
+  $0 ghost since Aug 4, 99.9% live-data. Per-agent table (presales
+  attribution now live): reply-weighted cohorts - testers Johanne+Mike
+  3,150 replies 42.7/82.8 strict/broad (sales-context 821 · 34.6/81.2);
+  XV presales-11 5,239 · 23.8/68.9 (sales-context 2,378 · 23.5/74.1);
+  BAU rest 12,528 · 24.3/56.2. Conversion: three instruments bridged,
+  never blended - lane (SR page: XV presale 27.5% vs BAU lane 26.6%),
+  tool (Co-Pilot default view 20.5 vs 20.4 with/without; May cohort
+  +8.97pp report-basis from the Aug-10 deck), pilot (Aug 4-13 export:
+  Johanne 0/42, Mike 4/77 = 3.4% vs shift-matched peers 27.92% - no
+  holdout, not attributable to the tool). Pipeline: 2,665 opportunity
+  flags (11%), 1,813 actionable, $0 priced - the linkage ask. Open flag
+  kept: the pilot deck's 13/$1,121.12 vs registered 3/$199.83.
+  v6 (superseded) - Full SR reconsolidation - Aug 17, 2026 (PHT)
+  Fresh pull: 11,805 rows, filings Jan 1 - Aug 17 (was 11,631 / Aug 14).
+  Verified stable: every agent's Jan-Jun layer identical across the roll;
+  July moved +1.00 (Paris Lindo validation flip). Aug now runs to Aug 17.
+  Tickets: the LIVE tracker tab now retains only Jul-Aug (history trimmed) -
+  Jul ties the Aug-14 export (with two +/-1 re-attributions: Jorie 379,
+  Otzi 331); Aug grew to 2,609 through Aug 16, and brand sums tie the SR
+  page's own grid denominators exactly (24,177 + 6,957 + 6,870 = 38,004).
+  The Aug-14 export is therefore the standing Jan-Jul ticket record: archive
+  it. Conversion windows now matched Jan 1 - Aug 16 on BOTH sides (numerator
+  capped at the ticket max date; the page itself carries a 1-day overhang).
+  New consolidated SR section quotes every page panel (sales count, gross,
+  monthly trend, sale-type, plan mix) re-derived from the page's data object,
+  including two named page quirks: the monthly gross column labeled "(VAL)"
+  reconciles as filed value for open months, and page revoked share (17.4%)
+  vs the payout log's 7.7% is a window difference, not a contradiction.
+  Program payout dollars and the OB lane stay dated Aug 14 (their sources
+  have not re-exported); every dated figure is labeled as such.
+  v5 (superseded) - Basis upgrade + monthly stack rank - Aug 15, 2026 (PHT)
+  Phillip's three asks resolved:
+  1. WHY LOWER THAN THE SR PAGE - answered and fixed. The SR page's conversion
+     grids use THE SAME 37,555 ticket denominator as this file (XV 23,935 + CG
+     6,862 + PIA 6,758, tied exactly to the tracker's Presale Tickets tab). The
+     gap was two numerator dials: (a) v4 counted only unified-log sales (Jun/Jul
+     onward) against full-year tickets - a 2.65-4.87x denominator inflation;
+     (b) the page counts validated sales INCLUDING grace-period-disqualified
+     units (replicated to the decimal: XV 6,584.25 / CG 2,098.5 / PIA 1,949.17),
+     1,858.67 units this board excludes. v5's conversion board now uses the
+     full-year SR construction (validated, ex-DQ, ex-outbound, filed-month, Jan 1
+     - Aug 14) over the same tickets: network 23.1% vs page 28.3% vs v4's 6.0%.
+  2. AUDREY & MABEL re-sourced to their own book (Mabel and Audrey Sheet -
+     outbound SOR): YTD May-Aug Audrey 20 deals / $9,225.49 · Mabel 27 /
+     $10,464.51 · lane $19,690.00. July ties the sheet to the cent (14 /
+     $7,947.74). Their 2+8 co-filed VPN-log rows ($56.94 / $350.72) are removed
+     from the program tiles so nothing double-counts: tiles re-scoped to
+     filed $181,277.32 = kept $139,200.06 + revoked $11,598.50 + pending
+     $30,478.76; sales 2,554.5 = 2,293.5 validated + 261 pending.
+  3. MONTHLY STACK RANK Jan-current with quarterly seats (Q1/Q2/Q3) added -
+     one instrument (SR feed per-agent monthly validated ex-DQ) over tracker
+     monthly tickets. Jan-May = migrated layer (reads 17-28% low network-wide;
+     ranks assume the loss is not agent-selective) · Jun = hybrid (weakest
+     anchor) · Jul-Aug = native, ties the tracker log +3.6% (tracker higher;
+     DQ-flag timing). Kianna Sison (departed) holds 85.66 validated YTD with no
+     ticket attribution - listed, unseated. Aug is MTD (sales to Aug 14, tickets
+     to Aug 13).
+  Board notes: power = avg(conversion seat, gross seat) - conversion now
+  full-year, gross unchanged (program payout log; CG files from Jun 1, XV/PIA
+  from Jul 1). New #1 Harold Arciaga (2.5), #2 Jorie Anglo (3.0), #3 Peejay
+  Frac (4.5). v4's #1 (Jhem Agsalda) was a window artifact - his June-start
+  numerator was self-matched while veterans' Jan-May sales were excluded; on
+  the program window he remains XV's top close rate. SR feed fingerprint at
+  pull: 11,631 rows, Jan 1 - Aug 14 (unchanged across both pulls tonight).
+  Adversarial verification (second pass) caught and fixed before ship:
+  (1) OB deal-mix read off the wrong July columns - DIPT is $7,804.31 /
+  Teams $10,407.22 / VPN subs $1,478.47; (2) an overclaim that Jhem holds
+  XV's best program-window rate - he is 6th of 11 (21.96%; Jorie 29.09%
+  leads); (3) the bridge gap now decomposes fully (churned 1,858.67 +
+  departed 85.66 + rounding 0.43 = 1,944.76); (4) one Q3 seat pair ranked
+  on rounded rates (Steven 36.200% vs Aedan 36.199%) - re-ranked exact.
+  v5.1 cosmetic: full table re-fit (14 columns) - shortened headers, compact
+  row tags, ellipsis on long agent annotations, horizontal-scroll fallback,
+  and single-rule borders (last-row bottom border removed so it no longer
+  doubles against the card foot). No data changes.
+  Prior versions: v4 (verification pass) · v3 (master-file reconciliation) ·
+  v2/v1 (feed-based, retired). All v4 program dollars re-verified unchanged.
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agent Stack Rank — Power, Conversion &amp; Gross Revenue · YTD 2026 · v9</title>
+<style>
+  :root { color-scheme: light; }
+  .viz-root {
+    --page:#F7F8FA; --surface-1:#fcfcfb; --text-primary:#1F2933; --text-secondary:#52514e;
+    --text-muted:#898781; --grid:#e1e0d9; --baseline:#c3c2b7; --border:rgba(11,11,11,0.10);
+    --series-xv:#2a78d6; --series-cg:#eb6834; --series-pia:#1baf7a; --neutral-bar:#c3c2b7;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--page); font-family:system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--text-primary); }
+  .viz-root { max-width:980px; margin:0 auto; padding:32px 24px 48px; }
+  header h1 { font-size:22px; font-weight:700; letter-spacing:-0.01em; }
+  header .sub { color:var(--text-secondary); font-size:13.5px; margin-top:6px; line-height:1.5; max-width:78ch; }
+  header .asof { color:var(--text-muted); font-size:12px; margin-top:8px; }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin:22px 0 26px; }
+  .tile { background:var(--surface-1); border:1px solid var(--border); border-radius:10px; padding:14px 16px; }
+  .tile .lbl { font-size:12px; color:var(--text-secondary); }
+  .tile .val { font-size:23px; font-weight:600; margin-top:4px; }
+  .tile .note { font-size:11.5px; color:var(--text-muted); margin-top:4px; }
+  .card { background:var(--surface-1); border:1px solid var(--border); border-radius:12px; padding:20px 22px 18px; margin-bottom:26px; }
+  .card h2 { font-size:15.5px; font-weight:700; line-height:1.35; }
+  .card .desc { font-size:12.5px; color:var(--text-secondary); margin-top:4px; line-height:1.5; }
+  .legend { display:flex; gap:16px; margin:12px 0 14px; flex-wrap:wrap; }
+  .legend .key { display:flex; align-items:center; gap:6px; font-size:12px; color:var(--text-secondary); }
+  .key .sw { width:10px; height:10px; border-radius:3px; }
+  .key .dotk { width:9px; height:9px; border-radius:50%; background:var(--text-secondary); }
+  .key .ringk { width:9px; height:9px; border-radius:50%; border:2px solid var(--text-secondary); background:var(--surface-1); }
+  .rows { display:flex; flex-direction:column; gap:5px; }
+  .row { display:grid; grid-template-columns:158px 1fr; align-items:center; gap:10px; border-radius:6px; padding:1px 4px; }
+  .row:hover { background:rgba(11,11,11,0.035); }
+  .row .name, .prow .name { font-size:12px; color:var(--text-primary); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:right; }
+  .row .name .rk, .prow .name .rk { color:var(--text-muted); font-variant-numeric:tabular-nums; display:inline-block; width:22px; text-align:right; margin-right:6px; }
+  .track { display:flex; align-items:center; gap:7px; min-height:18px; }
+  .bar { height:14px; border-radius:0 4px 4px 0; flex:none; }
+  .vlab { font-size:11.5px; color:var(--text-secondary); font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .prow { display:grid; grid-template-columns:158px 1fr 64px; align-items:center; gap:10px; border-radius:6px; padding:1px 4px; }
+  .prow:hover { background:rgba(11,11,11,0.035); }
+  .plot { position:relative; height:20px; }
+  .plot .conn { position:absolute; top:50%; height:2px; margin-top:-1px; background:var(--baseline); border-radius:1px; }
+  .plot .pt { position:absolute; top:50%; width:10px; height:10px; margin:-5px 0 0 -5px; border-radius:50%; box-shadow:0 0 0 2px var(--surface-1); }
+  .plot .pt.ring { background:var(--surface-1); border-width:2.5px; border-style:solid; }
+  .pscore { font-size:11.5px; color:var(--text-secondary); font-variant-numeric:tabular-nums; text-align:left; white-space:nowrap; }
+  .paxis { display:grid; grid-template-columns:158px 1fr 64px; gap:10px; align-items:end; margin-bottom:6px; }
+  .paxis .cap { font-size:11px; color:var(--text-muted); text-align:right; }
+  .paxis .ticks { position:relative; height:16px; font-size:10.5px; color:var(--text-muted); font-variant-numeric:tabular-nums; }
+  .paxis .ticks span { position:absolute; transform:translateX(-50%); }
+  .gridbg { background:var(--tickbg); }
+  .foot { font-size:11.5px; color:var(--text-muted); margin-top:14px; line-height:1.55; border-top:1px solid var(--grid); padding-top:10px; }
+  #tt { position:fixed; pointer-events:none; background:#1F2933; color:#fff; font-size:12px; line-height:1.5; padding:8px 11px; border-radius:8px; opacity:0; transition:opacity .08s; z-index:10; max-width:300px; }
+  #tt .t { font-weight:600; } #tt .d { color:#cdd3da; }
+  table { width:100%; border-collapse:collapse; font-size:11px; }
+  th { text-align:right; color:var(--text-muted); font-weight:600; padding:6px 5px; border-bottom:1px solid var(--baseline); white-space:nowrap; }
+  th.l, td.l { text-align:left; }
+  td { text-align:right; padding:5px 5px; border-bottom:1px solid var(--grid); font-variant-numeric:tabular-nums; color:var(--text-primary); white-space:nowrap; }
+  td.l { font-variant-numeric:normal; white-space:nowrap; }
+  table tr:last-child td { border-bottom:0; }           /* no doubled rule against the card foot */
+  .tblwrap { overflow-x:auto; }
+  #tbl { font-size:10.5px; }
+  #tbl th { padding:6px 4px; }
+  #tbl td { padding:4px 4px; }
+  #tbl td.agent { max-width:172px; overflow:hidden; text-overflow:ellipsis; }
+  #tbl td.agent .tag { color:var(--text-muted); font-size:9.5px; margin-left:5px; }
+  td .dot { display:inline-block; width:8px; height:8px; border-radius:2.5px; margin-right:7px; vertical-align:baseline; }
+  tr.dim td { color:var(--text-muted); }
+  .muted { color:var(--text-muted); }
+  /* bridge ladder */
+  .ladder { display:flex; flex-direction:column; gap:8px; margin:14px 0 6px; }
+  .lrow { display:grid; grid-template-columns:210px 1fr 220px; align-items:center; gap:10px; }
+  .lrow .llbl { font-size:12px; text-align:right; color:var(--text-secondary); }
+  .lrow .lbar { height:16px; border-radius:0 4px 4px 0; }
+  .lrow .lval { font-size:12px; color:var(--text-primary); font-variant-numeric:tabular-nums; }
+  .btable { margin-top:14px; table-layout:auto; }
+  .btable th, .btable td { white-space:normal; }
+  .btable td:last-child, .btable th:last-child { text-align:left; padding-left:14px; }
+  .btable td { vertical-align:top; line-height:1.45; }
+  /* monthly matrix */
+  .mxwrap { overflow-x:auto; }
+  .mx { border-collapse:collapse; width:100%; font-size:10.5px; }
+  .mx th { padding:4px 3px; font-size:10px; }
+  .mx td { padding:3px 3px; text-align:center; border-bottom:1px solid var(--grid); font-variant-numeric:tabular-nums; }
+  .mx td.nm { text-align:right; white-space:nowrap; font-variant-numeric:normal; font-size:11px; padding-right:8px; }
+  .mx .q { background:rgba(11,11,11,0.045); font-weight:600; }
+  .mx th.q { background:rgba(11,11,11,0.07); color:var(--text-secondary); }
+  .mx .r1 { font-weight:700; }
+  .mx td.c { cursor:default; border-radius:3px; }
+  .eras { display:flex; gap:14px; flex-wrap:wrap; margin:10px 0 12px; font-size:11px; color:var(--text-muted); }
+  .eras b { color:var(--text-secondary); font-weight:600; }
+  .champ { font-size:11.5px; color:var(--text-secondary); margin-top:10px; line-height:1.6; }
+  .obt td, .obt th { font-size:11px; }
+  .gwrap { margin:14px 0 6px; }
+  .gwrap svg { width:100%; height:auto; display:block; }
+  .gcap { font-size:11px; color:var(--text-muted); margin-top:4px; }
+</style>
+</head>
+<body>
+<div class="viz-root">
+  <header>
+    <h1>Agent Stack Rank — Power, Conversion &amp; Gross Revenue · YTD 2026</h1>
+    <div class="sub">The power rank works like a decathlon: each agent's seat on the conversion board and on the gross-revenue board, averaged — lowest average wins; ties break on validated program dollars.
+      <b>Conversion is now the full-year rate, built exactly the way the Sales Opportunity Report builds it</b>: every validated sale filed since Jan 1 (excluding disqualified and outbound) ÷ every customer ticket the agent handled since Jan 1 — the same 38,004-ticket base the SR page uses, so this board and that page finally speak the same language.
+      Gross revenue stays on the payout log: credit-weighted value of every sale filed since the unified log opened (CG from Jun 1; XV and PIA from Jul 1), split kept / revoked / pending.
+      Audrey Rivera and Mabel David's production now comes from their own book (the outbound SOR sheet) and is shown in its own lane — never summed with the inbound program.</div>
+    <div class="asof">Every source pulled live for this build (Aug 17, 2026, evening PHT): SR feed 11,805 rows, filings Jan 1–Aug 17 (verified twice today, incl. after a brief ~7 PM page outage — Jan–Jun layers unchanged all day) · program payout dollars from the LIVE unified log, filings through Aug 17 (2,976 rows since Jun 1; the live sheet added two new tracking columns vs the Aug-14 export) · tickets from the live tracker tab through Aug 16 (38,004 — ties the SR page's grid denominators exactly; Jan–Jun history from the archived Aug-14 export, the live tab keeps only Jul–Aug) · conversion windows matched Jan 1–Aug 16 on both sides · outbound lane live (the live tab now carries only the open month; May–Jul from its locked blocks) · ARIA Lab live ~6:20 PM · Co-Pilot default view (Aug 11 — sandbox allows no deeper read) · SR page conversion grids read directly off the page's own charts · Cadence: YTD cumulative + monthly · Confidence: High on Jul–Aug &amp; all dollars · Med-floor on Jan–Jun rates (SR migrated layer, 17–28% low network-wide)</div>
+  </header>
+
+  <div class="kpis">
+    <div class="tile"><div class="lbl">Full-year conversion (validated)</div><div class="val">23.2%</div><div class="note">8,799.64 ÷ 38,004 tickets (Jan 1–Aug 16, numerator and denominator matched) · SR-page basis reads 28.3% — see bridge</div></div>
+    <div class="tile"><div class="lbl">Program validated gross</div><div class="val">$161,661.26</div><div class="note">kept $148,483.08 · revoked $13,178.18 (8.2%) · payout log LIVE through Aug 17</div></div>
+    <div class="tile"><div class="lbl">Program filed gross</div><div class="val">$190,184.65</div><div class="note">$28,523.39 pending · 2,670.5 sales filed (2,431.5 validated · 239 pending) · live through Aug 17</div></div>
+    <div class="tile"><div class="lbl">Outbound lane (Audrey + Mabel)</div><div class="val">$19,731.63+</div><div class="note">49 deals May–Aug · live sheet · 3 fresh Aug VPN subs await amounts · July record 14 / $7,947.74</div></div>
+  </div>
+
+  <div class="card">
+    <h2>The bridge: this board and the SR page use the same 38,004 tickets — the page's rate is higher only because its numerator keeps sales that later churned</h2>
+    <div class="desc">Three readings of the exact same desk. v4's 6.0% divided a 2-month sales log by a full year of tickets — that mismatch is retired. The board counts the full year of validated sales on matched windows (Jan 1–Aug 16 both sides); the SR page adds back 1,970.28 more units — 1,875.67 that disqualified inside the grace period, 85.66 from a departed agent with no ticket base (Kianna Sison), and 8.95 of Aug-17 filings its ticket base doesn't cover yet (8.50 filed that day + 0.45 of rounding).</div>
+    <div class="ladder" id="ladder"></div>
+    <table class="btable">
+      <thead><tr><th class="l">Brand</th><th>Board rate (validated, ex-churn)</th><th>SR page rate</th><th>Page − board gap, decomposed</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><span class="dot" style="background:var(--series-xv)"></span>XV Presale</td><td>22.2% (5,369.75 ÷ 24,177)</td><td>27.5% (6,646.25 ÷ 24,177)</td><td>1,276.50 = 1,186.5 grace-churned (18% of the page numerator) + 85.66 departed agent + 4.34 Aug-17 skew &amp; rounding</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--series-cg)"></span>CG Presale</td><td>27.3% (1,895.98 ÷ 6,957)</td><td>30.6% (2,131.5 ÷ 6,957)</td><td>235.52 = 233.5 grace-churned (11%) + 2.02 Aug-17 skew/rounding</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--series-pia)"></span>PIA Presale</td><td>22.3% (1,533.91 ÷ 6,870)</td><td>29.0% (1,992.17 ÷ 6,870)</td><td>458.26 = 455.67 grace-churned (23%) + 2.59 Aug-17 skew/rounding</td></tr>
+      </tbody>
+    </table>
+    <div class="foot">Every page figure replicated to the decimal from the page's own data object at the Aug-17 pull. Residual footnotes: the page's numerator runs one day past its own ticket base (Aug-17 filings, 8.95 units — the same skew decomposed above); its agent drill-down buckets by subscription month (this file stays on filed month, the only basis present in every month); the departed-agent units (Kianna Sison) are worth 0.35pp of the page's XV rate; Jul–Aug per-agent validated tied the tracker log within +3.6% at the Aug-14 cut (tracker higher — DQ-flag timing). Jan–Jun sits on the feed's migrated layer, which reads 17–28% low network-wide — verified unchanged row-for-row between the Aug-14 and Aug-17 pulls: treat Jan–Jun rates as floors, and ranks there assume the loss is not agent-selective.</div>
+  </div>
+
+
+  <div class="card">
+    <h2>Sales Opportunity Report — consolidated: 11,053.92 sales filed YTD, $851,522.49 validated gross, and the validation queue is nearly clear</h2>
+    <div class="desc">Every panel of the SR page, quoted at the Aug-17 pull and re-derived from the page's own data object (each figure reproduces within display rounding). The migrated Jan–Jun layer is a floor — its counts read 17–28% low network-wide; the native Jul–Aug layer mirrors the tracker filings.</div>
+    <table class="btable">
+      <thead><tr><th class="l">Brand</th><th>Sales filed</th><th>Validated</th><th>Pending</th><th>Gross (page card)</th><th>= Validated $</th><th>+ Pending $</th><th>Page conversion</th><th>Board conversion</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><span class="dot" style="background:var(--series-xv)"></span>XV</td><td>6,899.25</td><td>6,666.25</td><td>233</td><td>$645,176.35</td><td>$616,867.00</td><td>$28,309.35</td><td>27.5% (6,646.25 ÷ 24,177)</td><td>22.2%</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--series-cg)"></span>CG</td><td>2,157.50</td><td>2,153.50</td><td>4</td><td>$120,274.89</td><td>$120,100.80</td><td>$174.09</td><td>30.6% (2,131.5 ÷ 6,957)</td><td>27.3%</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--series-pia)"></span>PIA</td><td>1,997.17</td><td>1,996.17</td><td>1</td><td>$114,611.62</td><td>$114,554.68</td><td>$56.94</td><td>29.0% (1,992.17 ÷ 6,870)</td><td>22.3%</td></tr>
+        <tr><td class="l"><b>Network</b></td><td><b>11,053.92</b></td><td><b>10,815.92</b></td><td><b>238</b></td><td><b>$880,062.86</b></td><td><b>$851,522.49</b></td><td><b>$28,540.38</b></td><td><b>28.3%</b></td><td><b>23.2%</b></td></tr>
+      </tbody>
+    </table>
+    <div class="desc" style="margin-top:6px">Reads exactly like the page's own cards: each brand's headline gross = validated + pending (XV $645,176.35 = $616,867.00 + $28,309.35); the big page number ($851,522.49) is the validated slice.</div>
+    <div class="gwrap" id="srmChart"></div>
+    <div class="desc" style="margin-top:12px"><b>Monthly trend, the page's own table</b> (default cut: all directions, disqualified included; Aug = MTD Aug 1–17):</div>
+    <table class="btable">
+      <thead><tr><th class="l">Month</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug MTD</th></tr></thead>
+      <tbody>
+        <tr><td class="l">Sales</td><td>492</td><td>1,384</td><td>1,846.17</td><td>1,814.75</td><td>1,720.33</td><td>1,294.92</td><td>1,647.42</td><td>854.33</td></tr>
+        <tr><td class="l">Δ MoM</td><td>—</td><td>+181.3%</td><td>+33.4%</td><td>−1.7%</td><td>−5.2%</td><td>−24.7%</td><td>+27.2%</td><td>−48.1%*</td></tr>
+        <tr><td class="l">Gross</td><td>$44,522.45</td><td>$117,055.94</td><td>$150,540.95</td><td>$150,093.19</td><td>$135,337.36</td><td>$100,415.89</td><td>$118,168.01</td><td>$63,929.09</td></tr>
+      </tbody>
+    </table>
+    <div class="desc" style="margin-top:12px"><b>Sale-type split</b> (filed / validated): Migrated Sale 8,073.25 / 8,073.25 · Regular Sale 2,344.75 / 2,312.75 · Upgrade Existing Sub 447.83 / 250.83 · New Sub for Better Offer 188.08 / 179.08. The migrated type is the frozen Jan–Jun era (73% of the filed book, floor); all growth lands in the three native types.
+    <br><b>Plan mix</b> (validated only, subscription-date basis, active $ / revoked $): 1-Month 2,926.5 u ($23,695.48 / $16,411.69) · 6-Month 37 u ($1,270.44 / $260.82) · 1-Year 1,415 u ($76,972.80 / $13,791.45) · 2-Year 4,983.25 u ($505,759.16 / $94,606.46) · 3-Year 1,450.17 u ($95,832.62 / $22,921.56) · #N/A 4 u. Two-year plans carry 70.5% of validated dollars.</div>
+    <div class="foot">Ties that hold the panel together: the plan-mix active + revoked dollars reproduce the validated gross ($703,530.50 + $147,991.98 = $851,522.48 — the page card prints $851,522.49; the cent is page-side cell rounding, quoted as printed); the brand ticket bases sum to the conversion grids exactly (24,177 + 6,957 + 6,870 = 38,004). Two page quirks, named so nobody trips on them: the monthly table's gross column is labeled "(VAL)" but reconciles only as filed value — validated plus pending — for the open months (Jul $118,168.01 = $98,702.57 validated + $19,465.44 pending); and page-wide revoked dollars run 17.4% of validated gross because the full-year book includes grace-churned rows — the payout log's 7.7% covers clean Jun+ filings only, a different book by design. *Aug Δ compares 17 days to a full July. XV BAU (support motion) is tracked separately by the page at 26.6% (1,060 ÷ 3,983) and is never blended into any presale figure here. 🔴 Continuity watch: the live ticket tab now retains only Jul–Aug — the Aug-14 export is the standing Jan–Jul ticket record; archive it.</div>
+  </div>
+
+  <div class="card">
+    <h2 id="powerH2">Power board</h2>
+    <div class="desc">Both board seats per agent, connected — a short span near the left means strong on both games. Three agents now sit top-7 on both boards (★): Harold, Jorie, and Peejay, whose fresh CG dollars just carried him into the gross top 7. Jhem Agsalda's v4 crown was a window artifact — his June start self-matched while veterans' Jan–May sales sat outside the old numerator. The full-year board now credits the veterans' first half; Jhem posts 21.8% on the program window (live log through Aug 17), seventh of eleven XV seats inside his first quarter on the desk.</div>
+    <div class="legend">
+      <span class="key"><span class="dotk"></span>Conversion-board seat</span>
+      <span class="key"><span class="ringk"></span>Gross-board seat</span>
+      <span class="key"><span class="sw" style="background:var(--series-xv)"></span>XV Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-cg)"></span>CG Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-pia)"></span>PIA Presale</span>
+    </div>
+    <div class="paxis"><div class="cap">board seat (1 = best) →</div><div class="ticks" id="pticks"></div><div class="cap" style="text-align:left">avg finish</div></div>
+    <div class="rows" id="powerChart"></div>
+    <div class="foot" id="powerFoot"></div>
+  </div>
+
+  <div class="card">
+    <h2>Conversion crown: Peejay Frac converts 44.9 of every 100 tickets he touches — nearly twice the 23.2% network rate; Steven (37.9%) and Harold (32.0%) complete the podium</h2>
+    <div class="desc">Full-year rate, all seated agents including Audrey Rivera's inbound era (Jan 1–Apr 19). CG takes 5 of the top 8 seats on pure efficiency; XV's veterans hold the volume-plus-rate middle; Jhem's 18.4% is a June-start book measured against full-year veterans — on the like-for-like program window (live log) he runs 21.8%, seventh of eleven XV seats in his first quarter.</div>
+    <div class="legend">
+      <span class="key"><span class="sw" style="background:var(--series-xv)"></span>XV Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-cg)"></span>CG Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-pia)"></span>PIA Presale</span>
+      <span class="key"><span class="sw" style="background:var(--neutral-bar)"></span>Inbound era ended (unseated on power)</span>
+    </div>
+    <div class="rows" id="convChart"></div>
+    <div class="foot">★ = top-7 on both boards. Numerator = SR feed validated sales, ex-disqualified, ex-outbound, filed-month, Jan 1–Aug 16; denominator = handled tickets Jan 1–Aug 16 (tracker Presale Tickets, owner-attributed — ties the SR page's own denominators exactly, 38,004). Windows matched on both sides; the page's own numerator runs one day longer. Outbound stays out of conversion for everyone: Serge Valencia (21 outbound filings), Katrina Teodoro (2.00), and the outbound lane below. Kianna Sison (departed) holds 85.66 validated YTD with no ticket attribution — real sales, no seat. Serge's 13.1% is inbound-era only; his motion shifted outbound mid-June.</div>
+  </div>
+
+  <div class="card">
+    <h2>Revenue crown: Jorie Anglo banks $16,635.70 — and Peejay Frac breaks the XV sweep, taking the #7 gross seat for CG</h2>
+    <div class="desc">Program payout log only (CG from Jun 1, XV/PIA from Jul 1), pulled live through Aug 17, credit-weighted, kept / revoked / pending on hover. XV holds 6 of the top 7. The outbound lane is its own card below — different book, never summed here.</div>
+    <div class="legend">
+      <span class="key"><span class="sw" style="background:var(--series-xv)"></span>XV Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-cg)"></span>CG Presale</span>
+      <span class="key"><span class="sw" style="background:var(--series-pia)"></span>PIA Presale</span>
+    </div>
+    <div class="rows" id="grossChart"></div>
+    <div class="foot">31 program agents seated. The unattributed #N/A row ($110.68 pending — filings submitted by Michael Lipat whose agent lookup failed, still growing from $97.69 on Aug 14) stays in the tiles but holds no seat. Audrey and Mabel's dollars moved to the outbound lane; their 2 + 8 co-filed VPN-log rows are excluded from the tiles above so nothing counts twice.</div>
+  </div>
+
+  <div class="card">
+    <h2 id="mxH2">Monthly stack rank — every agent, January to date, with quarterly seats</h2>
+    <div class="desc">Each cell is the agent's seat for that month (1 = best), ranked on the month's own conversion: validated sales that month ÷ tickets handled that month. Shaded columns are the quarter seats (Q1 · Q2 · Q3-to-date) on the quarter's aggregate rate. Seats rank on exact rates, with true ties split by sales volume (e.g. April's exact 27.2727% tie: Cams at 54 sales seats ahead of Aira at 21). Hover any cell for the exact sales, tickets and rate. Darker cell = higher seat.</div>
+    <div class="eras">
+      <span><b>Jan–May</b> · SR migrated layer — floor, reads 17–28% low network-wide</span>
+      <span><b>Jun</b> · hybrid month — weakest anchor in the series</span>
+      <span><b>Jul–Aug</b> · native — tied the payout log within +3.6% at the Aug-14 cut</span>
+      <span><b>Aug*</b> · MTD Aug 1–16, sales and tickets matched</span>
+    </div>
+    <div class="mxwrap"><table class="mx" id="mxT"></table></div>
+    <div class="champ" id="champs"></div>
+    <div class="foot">One instrument end-to-end (SR feed per-agent monthly validated, ex-DQ, ex-outbound, filed month) over tracker monthly tickets — never mixed inside a cell. Seats exist only where the agent handled tickets that month: Jhem starts June (first XV filings land July); Audrey seats Jan–Apr, then moves to the outbound lane (Apr 20); Serge holds Jul–Aug seats at 0% — his sales moved outbound. Kianna Sison (inactive per roster; final validated sale in June): Apr 18.83 · May 64.83 · Jun 2.00 with no ticket attribution — listed here, never seated. Monthly ticket totals: Jan 1,987 · Feb 4,844 · Mar 5,957 · Apr 5,996 · May 5,137 · Jun 5,717 · Jul 5,757 · Aug MTD 2,609 = 38,004 (July carries the live tab's two ±1 re-attributions vs the Aug-14 export: Jorie 379, Otzi 331).</div>
+  </div>
+
+
+  <div class="card">
+    <h2>ARIA — usage is proven, cheap and fast; conversion attribution is a logging gap, not a data gap</h2>
+    <div class="desc">Co-Pilot now lives inside the ARIA platform, and the Lab attributes presales agents directly. Every figure below is live from ARIA Lab Analytics (ExpressVPN · production · all-time window since Jul 16 · pulled Aug 17, ~6:20 PM PHT) unless dated otherwise. BAU testers = Johanne Buslig (EM shift) &amp; Mike Mitra (MID shift), both Non-Presale Team and assignee-attributed; presales = the full XV roster (11 agents across EM · MID · GY — ARIA is not activated for CG/PIA yet).</div>
+    <div class="gwrap" id="eraChart"></div>
+    <div class="gcap">Monthly conversion read directly off the SR page's own conversion-grid charts (sub-month basis, one instrument family for both lines). The XV presale Jun→Jul dip is the FIFA promo-cycle rate effect — it pre-dates ARIA. BAU's fall rides a thinning lane (Jul 43/316 → Aug 13/263) with no non-ARIA holdout — descriptive, never causal. ● = the tester pilot's Aug read (4/119 presale-routed tickets).</div>
+    <table class="btable">
+      <thead><tr><th class="l">ARIA topline</th><th>Value</th><th class="l" style="text-align:left">Behind it</th></tr></thead>
+      <tbody>
+        <tr><td class="l">Adoption (share of agent replies drafted with ARIA)</td><td><b>29.9%</b></td><td class="l">18,341 of 61,262 replies · sales-context replies run hotter: <b>39.6%</b> (2,525 of 6,374)</td></tr>
+        <tr><td class="l">Reply adoption (used / partial / not used)</td><td><b>41% · 30% · 29%</b></td><td class="l">8,602 used · 6,284 partial · 6,031 not used · drafts adopted per day 64% (14,886 of 23,107)</td></tr>
+        <tr><td class="l">Quality</td><td><b>79% · 87%</b></td><td class="l">79% helpful (3,586 / 653 / 441 flagged) · QA 87% correct · 6% partial · 7% incorrect (n = 4,399); 83% of flags = "incorrect information"</td></tr>
+        <tr><td class="l">Cost</td><td><b>$721.59</b></td><td class="l">$0.0312 per response · $0.0601 per ticket (23,107 responses · 12,013 tickets) · Lab tooling separate: $271.94 (16,088 calls)</td></tr>
+        <tr><td class="l">Speed &amp; reliability</td><td><b>10.2s</b></td><td class="l">p50 9.3s · p90 15.4s · coverage 17,075 of 24,079 drafts · 0 generation failures, $0 ghost spend since Aug 4 · 99.9% on live sheet data</td></tr>
+      </tbody>
+    </table>
+    <div class="desc" style="margin-top:12px"><b>Who leans on it — BAU vs presales</b> (reply-weighted from the per-agent table; strict = draft survives largely intact, recall ≥ 40%; broad = used in any part):</div>
+    <table class="btable">
+      <thead><tr><th class="l">Cohort</th><th>Replies (all)</th><th>Strict</th><th>Broad</th><th>Sales-context replies</th><th>Strict</th><th>Broad</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><span class="dot" style="background:var(--neutral-bar)"></span>BAU testers — combined</td><td>3,150</td><td><b>42.7%</b></td><td><b>82.8%</b></td><td>821</td><td>34.6%</td><td>81.2%</td></tr>
+        <tr><td class="l" style="padding-left:22px">↳ Mike Mitra (MID shift)</td><td>2,286</td><td><b>51.1%</b></td><td>86.4%</td><td>307</td><td>52.1%</td><td>87.3%</td></tr>
+        <tr><td class="l" style="padding-left:22px">↳ Johanne Buslig (EM shift)</td><td>864</td><td>20.5%</td><td>73.3%</td><td>514</td><td>24.1%</td><td>77.6%</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--series-xv)"></span>XV Presales (11 agents)</td><td>5,239</td><td>23.8%</td><td>68.9%</td><td>2,378</td><td>23.5%</td><td>74.1%</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--neutral-bar)"></span>BAU support (rest of fleet)</td><td>12,528</td><td>24.3%</td><td>56.2%</td><td colspan="3" class="l muted">thin per-agent samples at this cut (n &lt; 30 each)</td></tr>
+      </tbody>
+    </table>
+    <div class="desc" style="margin-top:8px">Presales spread is wide: Harold 45.6% strict → Jorie 30.5% → Ferrie 29.6% at the top; Estie 7.6% · Jeannie 11.2% · Nick 12.9% at the bottom — the mandate puts the tool in the loop, the working mode decides how much survives. Fleet-wide, Mike is the volume-plus-reliance outlier (2,286 replies · 51.1% strict) and Diomar posts the top strict rate (57.1%).</div>
+    <div class="desc" style="margin-top:14px"><b>Each tester against the full presales spectrum</b> — the band is the XV-11 range (min → median → max), the dots are Johanne and Mike:</div>
+    <div class="gwrap" id="specChart"></div>
+    <div class="gcap">Five rubrics, each row on its own scale, values printed. Usage: both testers sit at or above the presales median on every rubric — Mike clears the presales MAXIMUM on all four. Conversion and $-per-ticket: both sit below the presales minimum. Windows named: usage = all-time since Jul 16; conversion = presales Aug 1–16 band vs testers Aug 4–13; $/ticket = the locked Aug 4–9 shift-matched week (7 peers: $17.66 min · $21.62 median · $31.01 max). The band above pools all 11 presales agents; the shift-matched 1:1 cut follows below.</div>
+    <div class="desc" style="margin-top:14px"><b>Shift-matched 1:1 — each tester against their own shift's presales agents</b> (shifts verified two ways: the live Presale Agents Schedule sheet, and mean ticket hour from the tracker — EM ≈10–11h · MID ≈18–19h · GY circular-mean ≈2h; the testers appear in no schedule or attendance record, so their shift rests on ticket hour alone and is labelled <i>inferred</i>):</div>
+    <table class="btable">
+      <thead><tr><th class="l">Shift</th><th class="l" style="text-align:left">Agent</th><th>ARIA strict</th><th>Broad</th><th>Replies</th><th>Aug conversion</th><th>Program-window conv</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><b>EM</b><br><span class="muted" style="font-size:10px">5:45a–3p</span></td><td class="l"><b>Johanne Buslig</b> <span class="muted">(tester · inferred)</span><br>Jhem Agsalda<br>Ferrie Dizon<br>Jeannie Alejos<br><b>EM presales cohort</b></td>
+          <td><b>20.5%</b><br>27.3%<br>29.6%<br>11.2%<br><b>24.9%</b></td>
+          <td><b>73.3%</b><br>74.2%<br>79.9%<br>62.1%<br><b>74.6%</b></td>
+          <td><b>864</b><br>395<br>477*<br>367<br><b>1,644</b></td>
+          <td><b>0.00%</b> <span class="muted">(0/42)</span><br>19.99%<br>19.71%<br>19.31%<br><b>19.31–19.99%</b></td>
+          <td><span class="muted">n/a — BAU lane</span><br>21.82%<br>22.38%<br>21.25%<br><b>med 21.82%</b></td></tr>
+        <tr><td class="l"><b>MID</b><br><span class="muted" style="font-size:10px">1:45p–11p</span></td><td class="l"><b>Mike Mitra</b> <span class="muted">(tester · inferred)</span><br>Arla Semsem<br>Luiz Taruc<br>Estie Yalung<br>Paris Lindo<br><b>MID presales cohort</b></td>
+          <td><b>51.1%</b><br>23.6%<br>19.8%<br>7.6%<br>13.9%<br><b>15.5%</b></td>
+          <td><b>86.4%</b><br>59.2%<br>57.3%<br>39.9%<br>57.7%<br><b>54.6%</b></td>
+          <td><b>2,286</b><br>191<br>262<br>223<br>555<br><b>1,231</b></td>
+          <td><b>5.19%</b> <span class="muted">(4/77)</span><br>26.42%<br>26.16%<br>23.98%<br>20.99%<br><b>20.99–26.42%</b></td>
+          <td><span class="muted">n/a — BAU lane</span><br>23.38%<br>21.37%<br>23.39%<br>18.68%<br><b>med 22.38%</b></td></tr>
+        <tr><td class="l"><b>GY</b><br><span class="muted" style="font-size:10px">9:45p–7a</span></td><td class="l"><span class="muted">no tester on this shift</span><br>Harold Arciaga<br>Jorie Anglo<br>Nick Manlapaz<br>Otzi Padilla<br><b>GY presales cohort</b></td>
+          <td>—<br>45.6%<br>30.5%<br>12.9%<br>27.5%<br><b>27.3%</b></td>
+          <td>—<br>80.5%<br>72.1%<br>65.6%<br>76.6%<br><b>72.3%</b></td>
+          <td>—<br>548<br>656<br>844<br>316<br><b>2,364</b></td>
+          <td>—<br>27.37%<br>26.99%<br>24.01%<br>16.93%<br><b>16.93–27.37%</b></td>
+          <td>—<br>25.87%<br>29.27%<br>23.68%<br>19.07%<br><b>med 24.77%</b></td></tr>
+      </tbody>
+    </table>
+    <div class="gcap"><b>The 1:1 verdict, shift by shift.</b> <b>Mike (MID)</b> uses ARIA more than three times as heavily as his own shift's presales cohort (51.1% strict vs 15.5%) — the widest usage gap in the fleet — and still converts 5.19% against a MID presales band of 20.99–26.42%. <b>Johanne (EM)</b> uses it slightly <i>below</i> her shift cohort (20.5% vs 24.9%) and converts 0.00% against an EM band of 19.31–19.99%. So the two testers sit on opposite sides of the usage question and land in the same place on outcomes — which is the strongest available evidence that on this data usage intensity is not what moves conversion. GY is shown for completeness: it holds the fleet's heaviest presales user (Harold 45.6%) <i>and</i> its best Aug conversion (27.37%), but also Otzi at 27.5% usage / 16.93% conversion — no monotonic relationship on any shift. *Ferrie's reply count is her all-time ARIA total; her Jul–Aug ticket count differs.</div>
+
+    <div class="desc" style="margin-top:12px"><b>The conversion read — three instruments, never blended:</b></div>
+    <table class="btable">
+      <thead><tr><th class="l">Read</th><th class="l" style="text-align:left">What it says</th><th class="l" style="text-align:left">How to quote it</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><b>Lane</b> · SR page, Aug 17</td><td class="l">XV Presale converts <b>27.5%</b> (6,646.25 ÷ 24,177; board-matched 22.2%) vs the XV BAU lane <b>26.6%</b> (1,060 ÷ 3,983)</td><td class="l">Different populations (presale-routed vs BAU sales-flagged tickets) — a lane comparison, not an ARIA effect</td></tr>
+        <tr><td class="l"><b>Tool</b> · Co-Pilot in ARIA</td><td class="l">With-app <b>20.5%</b> vs without <b>20.4%</b> (+0.1pp; 6 agents, self-selected) · the May cohort read: <b>+8.97pp</b> (35.43% vs 26.46%, report basis)</td><td class="l">An observed split, never a controlled test — label the May figure by cohort and basis when quoted</td></tr>
+        <tr><td class="l"><b>Pilot — Mike Mitra</b> · MID · Aug 4–13</td><td class="l"><b>4 sales / 77 tickets = 5.19%</b> · $211.82 ($2.75 per ticket; $4.44 in the locked Aug 4–9 week) · YTD BAU-selling context: 17 / $1,227.55 (Jan–Aug 11)</td><td class="l">Fleet's heaviest ARIA user (2,286 replies · 51.1% strict — 3.3× his own MID presales cohort's 15.5%) yet converts below the presales Aug minimum (16.9%)</td></tr>
+        <tr><td class="l"><b>Pilot — Johanne Buslig</b> · EM · Aug 4–13</td><td class="l"><b>0 sales / 42 tickets = 0.00%</b> · $0.00 per ticket · YTD BAU-selling context: 8 / $520.46 (all Jan–Apr, pre-pilot)</td><td class="l">Usage sits just below her own EM cohort (20.5% vs 24.9% strict) — zero conversions on 42 presale-routed tickets; combined testers 3.4% vs shift-matched peers <b>27.92%</b> (Aug 4–9 locked)</td></tr>
+        <tr><td class="l"><b>Pilot caveat</b></td><td class="l" colspan="2">Populations differ and there is <b>no non-ARIA holdout</b> — the conversion gap is not attributable to the tool in either direction; the 13-vs-3 deck reconciliation stays open</td></tr>
+      </tbody>
+    </table>
+    <div class="desc" style="margin-top:8px"><b>The pipeline ARIA is already surfacing:</b> 2,665 of 24,079 XV drafts flagged a sales opportunity (11%) · 1,813 actionable (non-retention) · recommended-move mix led by new-purchase (1,605) · churn-risk reads: 431 high, 283 medium · top signals: use-case fit 603, ready-to-buy 533, cancel intent 459 · <b>$0 of it is priced</b>, because opportunity→outcome linkage is not logged yet.</div>
+    <div class="foot">Instruments &amp; dates: ARIA Lab Analytics live pull Aug 17 (window opened Jul 16; ExpressVPN = 99.8% of all ARIA activity; CG · PIA · Holiday · Intego return zero — CyberGhost is the named next pilot); Co-Pilot dashboard default view (New-customer scope, Mar–Aug, read Aug 11 — the sandboxed iframe exposes the default view only); pilot conversion from the Aug-14 tracker export (tester tickets by assignee on Non-Presale rows; tester sales from the BAU Sales tab); May-cohort proof from the Aug-10 consolidated deck. Definitional guardrails: ARIA's 29.9% adoption counts replies drafted, Co-Pilot's 23.3% app adoption counts tickets touched — neither converts into the other; never average the two teams' reliance. Standing flags: the pilot deck's 13 sales / $1,121.12 over 93 contacts vs the registered BAU Sales 3 / $199.83 (Aug 4–9) remains an open reconciliation item, and regression pass-rates are volatile (latest run 66.7%). The two asks that turn this activity into P&amp;L, both logging not modelling: (1) link opportunity flags to sales outcomes; (2) log handle-time and run a small non-ARIA holdout.</div>
+  </div>
+
+  <div class="card">
+    <h2>Outbound lane — Audrey &amp; Mabel's own book: $19,731.63 and counting across 49 deals since the lane opened in May</h2>
+    <div class="desc">System of record: the Mabel and Audrey Sheet (DIPT · Teams accounts · VPN subs), pulled live Aug 17 — the live tab now carries only the open month, so May–Jul stand on its locked blocks. July is the lane's record month and ties to the cent. No ticket denominator exists for outbound, so this lane ranks on dollars, not conversion.</div>
+    <div class="gwrap" id="obChart"></div>
+    <table class="obt">
+      <thead><tr><th class="l">Rep</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug MTD</th><th>YTD deals</th><th>YTD $</th></tr></thead>
+      <tbody>
+        <tr><td class="l"><span class="dot" style="background:var(--neutral-bar)"></span>Mabel David</td><td>11 · $4,560.94</td><td>5 · $2,032.71</td><td>8 · $3,132.49</td><td>4 · $780.00+</td><td>28</td><td>$10,506.14+</td></tr>
+        <tr><td class="l"><span class="dot" style="background:var(--neutral-bar)"></span>Audrey Rivera</td><td>8 · $1,661.94</td><td>4 · $1,573.99</td><td>6 · $4,815.25</td><td>3 · $1,174.31+</td><td>21</td><td>$9,225.49+</td></tr>
+        <tr><td class="l"><b>Lane</b></td><td>19 · $6,222.88</td><td>9 · $3,606.70</td><td>14 · $7,947.74</td><td>7 · $1,954.31+</td><td><b>49</b></td><td><b>$19,731.63+</b></td></tr>
+      </tbody>
+    </table>
+    <div class="foot">Audrey's July includes the lane's biggest single deal (a $3,198.31 Teams account). August so far: DIPT 4 / $1,954.31 booked (Audrey 2 / $1,174.31 · Mabel 2 / $780.00) plus 3 fresh XV VPN subs logged with amounts still blank on the live sheet — the “+” marks that floor. Two April tickets predate the lane's May 1 revenue basis and are excluded. Audrey also converted 18.7% of her tickets during her inbound era (Jan 1–Apr 19) — that seat lives on the conversion board above. Both reps beat their July productivity bar (attainment 134.5% / 132.9% per the sheet's own MTD tab).</div>
+  </div>
+
+  <div class="card tablecard">
+    <h2>Full table — every agent, both instruments, exact figures</h2>
+    <div class="tblwrap"><table id="tbl">
+      <thead><tr>
+        <th>Pwr</th><th>Avg</th><th>Conv</th><th>Gross</th><th class="l">Agent</th><th class="l">Team</th>
+        <th>Conv %</th><th>SR sales</th><th>Tickets</th><th>Log sales</th><th>Gross $</th><th>Kept</th><th>Revoked</th><th>Pending</th>
+      </tr></thead>
+      <tbody></tbody>
+    </table></div>
+    <div class="foot">Column keys: Pwr/Conv/Gross = board seats · Conv % &amp; SR sales = full-year SR feed · Log sales = payout log validated units. Two instruments side by side, never blended: <b>Conv % / SR sales</b> = full-year SR feed, Jan 1–Aug 16 matched windows (validated, ex-DQ, ex-outbound); <b>Log sales / Gross / Kept / Revoked / Pending</b> = the unified payout log (Jun 1 / Jul 1 onward) — all 31 agents' dollar cells re-pulled from the LIVE log through Aug 17 and tiles are the exact sum of the displayed cells. Jul–Aug reconciliation between the two instruments: tracker +70.48 units (+3.6%), DQ-flag timing. Audrey Rivera's gross cell is her outbound-lane YTD [OB sheet], not program dollars; Mabel David rows likewise; Serge Valencia's and Katrina Teodoro's gross includes their outbound-direction dollars (22.0 and 2.0 weighted filings) which stay out of conversion by convention; #N/A stays program ($110.68 pending and growing — was $97.69 on Aug 14; the agent-lookup failure is still leaking filings, source-owner fix pending). The July CG payout-ledger check remains live-sheet-only (its identity columns are array formulas). Jul–Aug per-agent SR-vs-log reconciliation was struck at the Aug-14 cut (+3.6%, log higher); the live log has since added filings through Aug 17. Roster, plan-price economics and team assignments re-verified against the master file.</div>
+  </div>
+
+  <div id="tt"></div>
+</div>
+
+<script>
+const D = {"conv": [[1, "Peejay Frac", "CG", 331.66, 738, 44.9404, "full"], [2, "Steven Lagania", "CG", 398.66, 1053, 37.8594, "full"], [3, "Harold Arciaga", "XV", 767.81, 2401, 31.9788, "full"], [4, "Franz Lacson", "CG", 181.33, 608, 29.824, "full"], [5, "Jorie Anglo", "XV", 741.7, 2635, 28.148, "full"], [6, "Aedan Colapo", "PIA", 191.99, 708, 27.1172, "full"], [7, "Cams Garcia", "CG", 235.5, 870, 27.069, "full"], [8, "Aira Pizarro", "CG", 130.5, 506, 25.7905, "full"], [9, "Nick Manlapaz", "XV", 586.24, 2308, 25.4003, "full"], [10, "Dianne Robles", "PIA", 159.49, 644, 24.7655, "full"], [11, "Luiz Taruc", "XV", 498.38, 2031, 24.5387, "full"], [12, "Joy Balanon", "PIA", 166.31, 725, 22.9393, "full"], [13, "Alain Lintag", "CG", 198.83, 871, 22.8278, "full"], [14, "Andreth Santos", "CG", 95.0, 417, 22.7818, "full"], [15, "Al Mallari", "PIA", 117.66, 519, 22.6705, "full"], [16, "Manuel Gonzales", "PIA", 161.83, 723, 22.3831, "full"], [17, "Sheldon Piana", "PIA", 126.5, 566, 22.3498, "full"], [18, "Katrina Teodoro", "PIA", 158.16, 715, 22.1203, "full"], [19, "Arla Semsem", "XV", 481.21, 2180, 22.0739, "full"], [20, "Angelika Bello", "CG", 156.5, 718, 21.7967, "full"], [21, "Carl Aranas", "PIA", 150.66, 722, 20.867, "full"], [22, "Creselda Rodriguez", "PIA", 164.49, 799, 20.587, "full"], [23, "Ferrie Dizon", "XV", 444.79, 2346, 18.9595, "full"], [24, "Audrey Rivera", "XV", 129.33, 692, 18.6893, "convOnly"], [25, "Otzi Padilla", "XV", 409.65, 2196, 18.6544, "full"], [26, "Jhem Agsalda", "XV", 160.4, 874, 18.3524, "full"], [27, "Jeannie Alejos", "XV", 397.3, 2173, 18.2835, "full"], [28, "Mia Gregorio", "PIA", 136.82, 749, 18.267, "full"], [29, "Paris Lindo", "XV", 402.3, 2283, 17.6216, "full"], [30, "Estie Yalung", "XV", 350.64, 2058, 17.0379, "full"], [31, "Nelanie Tinio", "CG", 74.5, 460, 16.1957, "full"], [32, "Serge Valencia", "CG", 93.5, 716, 13.0587, "full"]], "power": [[1, "Harold Arciaga", "XV", 3, 2, 2.5, 9863.84, 13524.03, 31.9788], [2, "Jorie Anglo", "XV", 5, 1, 3.0, 11313.56, 16635.7, 28.148], [3, "Peejay Frac", "CG", 1, 7, 4.0, 8816.99, 8906.3, 44.9404], [4, "Nick Manlapaz", "XV", 9, 3, 6.0, 9117.31, 12678.0, 25.4003], [5, "Steven Lagania", "CG", 2, 10, 6.0, 8186.87, 8186.87, 37.8594], [6, "Franz Lacson", "CG", 4, 16, 10.0, 4746.45, 4746.45, 29.824], [7, "Cams Garcia", "CG", 7, 14, 10.5, 5265.8, 5265.8, 27.069], [8, "Luiz Taruc", "XV", 11, 11, 11.0, 6434.62, 8151.1, 24.5387], [9, "Aedan Colapo", "PIA", 6, 19, 12.5, 3389.18, 3389.18, 27.1172], [10, "Otzi Padilla", "XV", 25, 4, 14.5, 8290.85, 11931.06, 18.6544], [11, "Ferrie Dizon", "XV", 23, 6, 14.5, 7511.33, 9774.68, 18.9595], [12, "Alain Lintag", "CG", 13, 17, 15.0, 4342.81, 4342.81, 22.8278], [13, "Joy Balanon", "PIA", 12, 18, 15.0, 4123.06, 4123.06, 22.9393], [14, "Dianne Robles", "PIA", 10, 20, 15.0, 3081.61, 3138.55, 24.7655], [15, "Jhem Agsalda", "XV", 26, 5, 15.5, 8613.79, 9917.24, 18.3524], [16, "Arla Semsem", "XV", 19, 13, 16.0, 6274.01, 7349.49, 22.0739], [17, "Aira Pizarro", "CG", 8, 25, 16.5, 2707.76, 2707.76, 25.7905], [18, "Jeannie Alejos", "XV", 27, 8, 17.5, 6256.17, 8539.43, 18.2835], [19, "Angelika Bello", "CG", 20, 15, 17.5, 4948.98, 4948.98, 21.7967], [20, "Manuel Gonzales", "PIA", 16, 21, 18.5, 3035.22, 3035.22, 22.3831], [21, "Paris Lindo", "XV", 29, 9, 19.0, 6532.08, 8492.09, 17.6216], [22, "Sheldon Piana", "PIA", 17, 24, 20.5, 2786.7, 2786.7, 22.3498], [23, "Al Mallari", "PIA", 15, 26, 20.5, 2666.63, 2666.63, 22.6705], [24, "Estie Yalung", "XV", 30, 12, 21.0, 6661.38, 8142.58, 17.0379], [25, "Andreth Santos", "CG", 14, 29, 21.5, 2140.59, 2140.59, 22.7818], [26, "Creselda Rodriguez", "PIA", 22, 23, 22.5, 2800.45, 2800.45, 20.587], [27, "Katrina Teodoro", "PIA", 18, 28, 23.0, 2420.8, 2420.8, 22.1203], [28, "Carl Aranas", "PIA", 21, 27, 24.0, 2519.13, 2519.13, 20.867], [29, "Mia Gregorio", "PIA", 28, 22, 25.0, 3005.85, 3005.85, 18.267], [30, "Nelanie Tinio", "CG", 31, 30, 30.5, 2061.96, 2061.96, 16.1957], [31, "Serge Valencia", "CG", 32, 31, 31.5, 1745.48, 1745.48, 13.0587]], "gross": [[1.0, "Jorie Anglo", "XV", 16635.7, 10283.77, 1029.79, 5322.14, 28.148], [2.0, "Harold Arciaga", "XV", 13524.03, 9415.67, 448.17, 3660.19, 31.9788], [3.0, "Nick Manlapaz", "XV", 12678.0, 8573.93, 543.38, 3560.69, 25.4003], [4.0, "Otzi Padilla", "XV", 11931.06, 7992.31, 298.54, 3640.21, 18.6544], [5.0, "Jhem Agsalda", "XV", 9917.24, 7582.0, 1031.79, 1303.45, 18.3524], [6.0, "Ferrie Dizon", "XV", 9774.68, 6578.12, 933.21, 2263.35, 18.9595], [7.0, "Peejay Frac", "CG", 8906.3, 8470.07, 346.92, 89.31, 44.9404], [8.0, "Jeannie Alejos", "XV", 8539.43, 5153.2, 1102.97, 2283.26, 18.2835], [9.0, "Paris Lindo", "XV", 8492.09, 5750.29, 781.79, 1960.01, 17.6216], [10.0, "Steven Lagania", "CG", 8186.87, 7589.0, 597.87, 0.0, 37.8594], [11.0, "Luiz Taruc", "XV", 8151.1, 5714.67, 719.95, 1716.48, 24.5387], [12.0, "Estie Yalung", "XV", 8142.58, 6137.92, 523.46, 1481.2, 17.0379], [13.0, "Arla Semsem", "XV", 7349.49, 5661.54, 612.47, 1075.48, 22.0739], [14.0, "Cams Garcia", "CG", 5265.8, 5106.56, 159.24, 0.0, 27.069], [15.0, "Angelika Bello", "CG", 4948.98, 4778.16, 170.82, 0.0, 21.7967], [16.0, "Franz Lacson", "CG", 4746.45, 4648.05, 98.4, 0.0, 29.824], [17.0, "Alain Lintag", "CG", 4342.81, 3828.94, 513.87, 0.0, 22.8278], [18.0, "Joy Balanon", "PIA", 4123.06, 3546.08, 576.98, 0.0, 22.9393], [19.0, "Aedan Colapo", "PIA", 3389.18, 3191.23, 197.95, 0.0, 27.1172], [20.0, "Dianne Robles", "PIA", 3138.55, 2765.61, 316.0, 56.94, 24.7655], [21.0, "Manuel Gonzales", "PIA", 3035.22, 2808.29, 226.93, 0.0, 22.3831], [22.0, "Mia Gregorio", "PIA", 3005.85, 2773.47, 232.38, 0.0, 18.267], [23.0, "Creselda Rodriguez", "PIA", 2800.45, 2642.45, 158.0, 0.0, 20.587], [24.0, "Sheldon Piana", "PIA", 2786.7, 2440.82, 345.88, 0.0, 22.3498], [25.0, "Aira Pizarro", "CG", 2707.76, 2358.32, 349.44, 0.0, 25.7905], [26.0, "Al Mallari", "PIA", 2666.63, 2479.2, 187.43, 0.0, 22.6705], [27.0, "Carl Aranas", "PIA", 2519.13, 2462.19, 56.94, 0.0, 20.867], [28.0, "Katrina Teodoro", "PIA", 2420.8, 2183.8, 237.0, 0.0, 22.1203], [29.0, "Andreth Santos", "CG", 2140.59, 2057.67, 82.92, 0.0, 22.7818], [30.0, "Nelanie Tinio", "CG", 2061.96, 1891.14, 170.82, 0.0, 16.1957], [31.0, "Serge Valencia", "CG", 1745.48, 1618.61, 126.87, 0.0, 13.0587]], "tbl": [[1, 2.5, 3, 2, "Harold Arciaga", "XV", 31.98, 767.81, 2401, 128.83, 13524.03, 9415.67, 448.17, 3660.19, "full"], [2, 3.0, 5, 1, "Jorie Anglo", "XV", 28.15, 741.7, 2635, 154.83, 16635.7, 10283.77, 1029.79, 5322.14, "full"], [3, 4.0, 1, 7, "Peejay Frac", "CG", 44.94, 331.66, 738, 149.67, 8906.3, 8470.07, 346.92, 89.31, "full"], [4, 6.0, 9, 3, "Nick Manlapaz", "XV", 25.4, 586.24, 2308, 116.5, 12678.0, 8573.93, 543.38, 3560.69, "full"], [5, 6.0, 2, 10, "Steven Lagania", "CG", 37.86, 398.66, 1053, 130.17, 8186.87, 7589.0, 597.87, 0.0, "full"], [6, 10.0, 4, 16, "Franz Lacson", "CG", 29.82, 181.33, 608, 79.33, 4746.45, 4648.05, 98.4, 0.0, "full"], [7, 10.5, 7, 14, "Cams Garcia", "CG", 27.07, 235.5, 870, 89.5, 5265.8, 5106.56, 159.24, 0.0, "full"], [8, 11.0, 11, 11, "Luiz Taruc", "XV", 24.54, 498.38, 2031, 82.92, 8151.1, 5714.67, 719.95, 1716.48, "full"], [9, 12.5, 6, 19, "Aedan Colapo", "PIA", 27.12, 191.99, 708, 58.67, 3389.18, 3191.23, 197.95, 0.0, "full"], [10, 14.5, 25, 4, "Otzi Padilla", "XV", 18.65, 409.65, 2196, 99.75, 11931.06, 7992.31, 298.54, 3640.21, "full"], [11, 14.5, 23, 6, "Ferrie Dizon", "XV", 18.96, 444.79, 2346, 98.92, 9774.68, 6578.12, 933.21, 2263.35, "full"], [12, 15.0, 13, 17, "Alain Lintag", "CG", 22.83, 198.83, 871, 76.83, 4342.81, 3828.94, 513.87, 0.0, "full"], [13, 15.0, 12, 18, "Joy Balanon", "PIA", 22.94, 166.31, 725, 68.33, 4123.06, 3546.08, 576.98, 0.0, "full"], [14, 15.0, 10, 20, "Dianne Robles", "PIA", 24.77, 159.49, 644, 48.17, 3138.55, 2765.61, 316.0, 56.94, "full"], [15, 15.5, 26, 5, "Jhem Agsalda", "XV", 18.35, 160.4, 874, 107.58, 9917.24, 7582.0, 1031.79, 1303.45, "full"], [16, 16.0, 19, 13, "Arla Semsem", "XV", 22.07, 481.21, 2180, 101.0, 7349.49, 5661.54, 612.47, 1075.48, "full"], [17, 16.5, 8, 25, "Aira Pizarro", "CG", 25.79, 130.5, 506, 45.5, 2707.76, 2358.32, 349.44, 0.0, "full"], [18, 17.5, 27, 8, "Jeannie Alejos", "XV", 18.28, 397.3, 2173, 102.83, 8539.43, 5153.2, 1102.97, 2283.26, "full"], [19, 17.5, 20, 15, "Angelika Bello", "CG", 21.8, 156.5, 718, 80.5, 4948.98, 4778.16, 170.82, 0.0, "full"], [20, 18.5, 16, 21, "Manuel Gonzales", "PIA", 22.38, 161.83, 723, 50.0, 3035.22, 2808.29, 226.93, 0.0, "full"], [21, 19.0, 29, 9, "Paris Lindo", "XV", 17.62, 402.3, 2283, 86.5, 8492.09, 5750.29, 781.79, 1960.01, "full"], [22, 20.5, 17, 24, "Sheldon Piana", "PIA", 22.35, 126.5, 566, 40.5, 2786.7, 2440.82, 345.88, 0.0, "full"], [23, 20.5, 15, 26, "Al Mallari", "PIA", 22.67, 117.66, 519, 42.67, 2666.63, 2479.2, 187.43, 0.0, "full"], [24, 21.0, 30, 12, "Estie Yalung", "XV", 17.04, 350.64, 2058, 96.83, 8142.58, 6137.92, 523.46, 1481.2, "full"], [25, 21.5, 14, 29, "Andreth Santos", "CG", 22.78, 95.0, 417, 40.5, 2140.59, 2057.67, 82.92, 0.0, "full"], [26, 22.5, 22, 23, "Creselda Rodriguez", "PIA", 20.59, 164.49, 799, 45.5, 2800.45, 2642.45, 158.0, 0.0, "full"], [27, 23.0, 18, 28, "Katrina Teodoro", "PIA", 22.12, 158.16, 715, 40.83, 2420.8, 2183.8, 237.0, 0.0, "full"], [28, 24.0, 21, 27, "Carl Aranas", "PIA", 20.87, 150.66, 722, 46.17, 2519.13, 2462.19, 56.94, 0.0, "full"], [29, 25.0, 28, 22, "Mia Gregorio", "PIA", 18.27, 136.82, 749, 51.17, 3005.85, 2773.47, 232.38, 0.0, "full"], [30, 30.5, 31, 30, "Nelanie Tinio", "CG", 16.2, 74.5, 460, 36.0, 2061.96, 1891.14, 170.82, 0.0, "full"], [31, 31.5, 32, 31, "Serge Valencia", "CG", 13.06, 93.5, 716, 11.0, 1745.48, 1618.61, 126.87, 0.0, "full"], [null, null, 24, null, "Audrey Rivera", "XV", 18.69, 129.33, 692, null, 9225.49, null, null, null, "convOnly"], [null, null, null, null, "Mabel David", "OB", null, null, null, null, 10506.14, null, null, null, "ob"], [null, null, null, null, "#N/A", "NA", null, null, null, null, 110.68, 0.0, 0.0, 110.68, "na"]], "mx": {"Aedan Colapo": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 106, "s": 25.5, "r": 24.06}, "M2603": {"t": 138, "s": 31.5, "r": 22.83}, "M2604": {"t": 119, "s": 24.33, "r": 20.45}, "M2605": {"t": 83, "s": 31.5, "r": 37.95}, "M2606": {"t": 108, "s": 23.5, "r": 21.76}, "M2607": {"t": 113, "s": 35, "r": 30.97}, "M2608": {"t": 41, "s": 20.66, "r": 50.39}, "Q1": {"t": 244, "s": 57.0, "r": 23.36}, "Q2": {"t": 310, "s": 79.33, "r": 25.59}, "Q3": {"t": 154, "s": 55.66, "r": 36.14}}, "Aira Pizarro": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 72, "s": 11, "r": 15.28}, "M2603": {"t": 96, "s": 30.5, "r": 31.77}, "M2604": {"t": 77, "s": 21, "r": 27.27}, "M2605": {"t": 76, "s": 27, "r": 35.53}, "M2606": {"t": 80, "s": 10, "r": 12.5}, "M2607": {"t": 59, "s": 15, "r": 25.42}, "M2608": {"t": 46, "s": 16, "r": 34.78}, "Q1": {"t": 168, "s": 41.5, "r": 24.7}, "Q2": {"t": 233, "s": 58, "r": 24.89}, "Q3": {"t": 105, "s": 31, "r": 29.52}}, "Al Mallari": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 79, "s": 15.5, "r": 19.62}, "M2603": {"t": 83, "s": 15.5, "r": 18.67}, "M2604": {"t": 81, "s": 16, "r": 19.75}, "M2605": {"t": 79, "s": 19.5, "r": 24.68}, "M2606": {"t": 81, "s": 12, "r": 14.81}, "M2607": {"t": 81, "s": 27.83, "r": 34.36}, "M2608": {"t": 35, "s": 11.33, "r": 32.37}, "Q1": {"t": 162, "s": 31.0, "r": 19.14}, "Q2": {"t": 241, "s": 47.5, "r": 19.71}, "Q3": {"t": 116, "s": 39.16, "r": 33.76}}, "Alain Lintag": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 76, "s": 4, "r": 5.26}, "M2603": {"t": 166, "s": 44, "r": 26.51}, "M2604": {"t": 150, "s": 39, "r": 26.0}, "M2605": {"t": 148, "s": 44, "r": 29.73}, "M2606": {"t": 112, "s": 18, "r": 16.07}, "M2607": {"t": 141, "s": 32, "r": 22.7}, "M2608": {"t": 78, "s": 17.83, "r": 22.86}, "Q1": {"t": 242, "s": 48, "r": 19.83}, "Q2": {"t": 410, "s": 101, "r": 24.63}, "Q3": {"t": 219, "s": 49.83, "r": 22.75}}, "Andreth Santos": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 38, "s": 3, "r": 7.89}, "M2603": {"t": 95, "s": 16, "r": 16.84}, "M2604": {"t": 78, "s": 16.5, "r": 21.15}, "M2605": {"t": 59, "s": 22, "r": 37.29}, "M2606": {"t": 51, "s": 18.5, "r": 36.27}, "M2607": {"t": 57, "s": 9.5, "r": 16.67}, "M2608": {"t": 39, "s": 9.5, "r": 24.36}, "Q1": {"t": 133, "s": 19, "r": 14.29}, "Q2": {"t": 188, "s": 57.0, "r": 30.32}, "Q3": {"t": 96, "s": 19.0, "r": 19.79}}, "Angelika Bello": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 87, "s": 16.5, "r": 18.97}, "M2603": {"t": 117, "s": 19, "r": 16.24}, "M2604": {"t": 71, "s": 14, "r": 19.72}, "M2605": {"t": 129, "s": 27, "r": 20.93}, "M2606": {"t": 114, "s": 17.5, "r": 15.35}, "M2607": {"t": 99, "s": 23.5, "r": 23.74}, "M2608": {"t": 101, "s": 39, "r": 38.61}, "Q1": {"t": 204, "s": 35.5, "r": 17.4}, "Q2": {"t": 314, "s": 58.5, "r": 18.63}, "Q3": {"t": 200, "s": 62.5, "r": 31.25}}, "Arla Semsem": {"M2601": {"t": 175, "s": 45, "r": 25.71}, "M2602": {"t": 242, "s": 58.5, "r": 24.17}, "M2603": {"t": 290, "s": 64.5, "r": 22.24}, "M2604": {"t": 351, "s": 73.91, "r": 21.06}, "M2605": {"t": 325, "s": 67.16, "r": 20.66}, "M2606": {"t": 365, "s": 75.66, "r": 20.73}, "M2607": {"t": 292, "s": 59.49, "r": 20.37}, "M2608": {"t": 140, "s": 36.99, "r": 26.42}, "Q1": {"t": 707, "s": 168.0, "r": 23.76}, "Q2": {"t": 1041, "s": 216.73, "r": 20.82}, "Q3": {"t": 432, "s": 96.48, "r": 22.33}}, "Audrey Rivera": {"M2601": {"t": 159, "s": 15, "r": 9.43}, "M2602": {"t": 174, "s": 39, "r": 22.41}, "M2603": {"t": 249, "s": 58.5, "r": 23.49}, "M2604": {"t": 110, "s": 16.83, "r": 15.3}, "M2605": {"t": 0, "s": 0, "r": null}, "M2606": {"t": 0, "s": 0, "r": null}, "M2607": {"t": 0, "s": 0, "r": null}, "M2608": {"t": 0, "s": 0, "r": null}, "Q1": {"t": 582, "s": 112.5, "r": 19.33}, "Q2": {"t": 110, "s": 16.83, "r": 15.3}, "Q3": {"t": 0, "s": 0, "r": null}}, "Cams Garcia": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 71, "s": 12, "r": 16.9}, "M2603": {"t": 138, "s": 41, "r": 29.71}, "M2604": {"t": 198, "s": 54, "r": 27.27}, "M2605": {"t": 115, "s": 41, "r": 35.65}, "M2606": {"t": 137, "s": 24, "r": 17.52}, "M2607": {"t": 148, "s": 43, "r": 29.05}, "M2608": {"t": 63, "s": 20.5, "r": 32.54}, "Q1": {"t": 209, "s": 53, "r": 25.36}, "Q2": {"t": 450, "s": 119, "r": 26.44}, "Q3": {"t": 211, "s": 63.5, "r": 30.09}}, "Carl Aranas": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 134, "s": 20, "r": 14.93}, "M2603": {"t": 93, "s": 20.5, "r": 22.04}, "M2604": {"t": 100, "s": 24.5, "r": 24.5}, "M2605": {"t": 132, "s": 21.5, "r": 16.29}, "M2606": {"t": 103, "s": 19, "r": 18.45}, "M2607": {"t": 103, "s": 29.5, "r": 28.64}, "M2608": {"t": 57, "s": 15.66, "r": 27.47}, "Q1": {"t": 227, "s": 40.5, "r": 17.84}, "Q2": {"t": 335, "s": 65.0, "r": 19.4}, "Q3": {"t": 160, "s": 45.16, "r": 28.23}}, "Creselda Rodriguez": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 139, "s": 15, "r": 10.79}, "M2603": {"t": 145, "s": 27.5, "r": 18.97}, "M2604": {"t": 110, "s": 31.5, "r": 28.64}, "M2605": {"t": 93, "s": 13.5, "r": 14.52}, "M2606": {"t": 139, "s": 27, "r": 19.42}, "M2607": {"t": 120, "s": 40.49, "r": 33.74}, "M2608": {"t": 53, "s": 9.5, "r": 17.92}, "Q1": {"t": 284, "s": 42.5, "r": 14.96}, "Q2": {"t": 342, "s": 72.0, "r": 21.05}, "Q3": {"t": 173, "s": 49.99, "r": 28.9}}, "Dianne Robles": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 117, "s": 19.5, "r": 16.67}, "M2603": {"t": 128, "s": 39, "r": 30.47}, "M2604": {"t": 76, "s": 22.33, "r": 29.38}, "M2605": {"t": 75, "s": 18.5, "r": 24.67}, "M2606": {"t": 98, "s": 16, "r": 16.33}, "M2607": {"t": 104, "s": 25.16, "r": 24.19}, "M2608": {"t": 46, "s": 19, "r": 41.3}, "Q1": {"t": 245, "s": 58.5, "r": 23.88}, "Q2": {"t": 249, "s": 56.83, "r": 22.82}, "Q3": {"t": 150, "s": 44.16, "r": 29.44}}, "Estie Yalung": {"M2601": {"t": 185, "s": 32.5, "r": 17.57}, "M2602": {"t": 241, "s": 39.5, "r": 16.39}, "M2603": {"t": 320, "s": 43.33, "r": 13.54}, "M2604": {"t": 336, "s": 47.83, "r": 14.24}, "M2605": {"t": 334, "s": 58.83, "r": 17.61}, "M2606": {"t": 228, "s": 35.66, "r": 15.64}, "M2607": {"t": 307, "s": 67.33, "r": 21.93}, "M2608": {"t": 107, "s": 25.66, "r": 23.98}, "Q1": {"t": 746, "s": 115.33, "r": 15.46}, "Q2": {"t": 898, "s": 142.32, "r": 15.85}, "Q3": {"t": 414, "s": 92.99, "r": 22.46}}, "Ferrie Dizon": {"M2601": {"t": 192, "s": 31, "r": 16.15}, "M2602": {"t": 270, "s": 58.5, "r": 21.67}, "M2603": {"t": 391, "s": 72, "r": 18.41}, "M2604": {"t": 363, "s": 61.41, "r": 16.92}, "M2605": {"t": 350, "s": 72.99, "r": 20.85}, "M2606": {"t": 338, "s": 53.99, "r": 15.97}, "M2607": {"t": 300, "s": 66.91, "r": 22.3}, "M2608": {"t": 142, "s": 27.99, "r": 19.71}, "Q1": {"t": 853, "s": 161.5, "r": 18.93}, "Q2": {"t": 1051, "s": 188.39, "r": 17.92}, "Q3": {"t": 442, "s": 94.9, "r": 21.47}}, "Franz Lacson": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 43, "s": 10, "r": 23.26}, "M2603": {"t": 118, "s": 45.5, "r": 38.56}, "M2604": {"t": 122, "s": 25.5, "r": 20.9}, "M2605": {"t": 68, "s": 23.5, "r": 34.56}, "M2606": {"t": 87, "s": 12.5, "r": 14.37}, "M2607": {"t": 105, "s": 35.83, "r": 34.12}, "M2608": {"t": 65, "s": 28.5, "r": 43.85}, "Q1": {"t": 161, "s": 55.5, "r": 34.47}, "Q2": {"t": 277, "s": 61.5, "r": 22.2}, "Q3": {"t": 170, "s": 64.33, "r": 37.84}}, "Harold Arciaga": {"M2601": {"t": 233, "s": 69.5, "r": 29.83}, "M2602": {"t": 312, "s": 131.5, "r": 42.15}, "M2603": {"t": 301, "s": 118, "r": 39.2}, "M2604": {"t": 391, "s": 117.91, "r": 30.16}, "M2605": {"t": 329, "s": 120.33, "r": 36.57}, "M2606": {"t": 337, "s": 86.5, "r": 25.67}, "M2607": {"t": 347, "s": 82.74, "r": 23.84}, "M2608": {"t": 151, "s": 41.33, "r": 27.37}, "Q1": {"t": 846, "s": 319.0, "r": 37.71}, "Q2": {"t": 1057, "s": 324.74, "r": 30.72}, "Q3": {"t": 498, "s": 124.07, "r": 24.91}}, "Jeannie Alejos": {"M2601": {"t": 204, "s": 25, "r": 12.25}, "M2602": {"t": 273, "s": 56, "r": 20.51}, "M2603": {"t": 306, "s": 71, "r": 23.2}, "M2604": {"t": 347, "s": 55.83, "r": 16.09}, "M2605": {"t": 312, "s": 58.5, "r": 18.75}, "M2606": {"t": 247, "s": 35.66, "r": 14.44}, "M2607": {"t": 371, "s": 73.49, "r": 19.81}, "M2608": {"t": 113, "s": 21.82, "r": 19.31}, "Q1": {"t": 783, "s": 152, "r": 19.41}, "Q2": {"t": 906, "s": 149.99, "r": 16.56}, "Q3": {"t": 484, "s": 95.31, "r": 19.69}}, "Jhem Agsalda": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 0, "s": 0, "r": null}, "M2603": {"t": 0, "s": 0, "r": null}, "M2604": {"t": 0, "s": 0, "r": null}, "M2605": {"t": 0, "s": 0, "r": null}, "M2606": {"t": 381, "s": 55.83, "r": 14.65}, "M2607": {"t": 363, "s": 78.58, "r": 21.65}, "M2608": {"t": 130, "s": 25.99, "r": 19.99}, "Q1": {"t": 0, "s": 0, "r": null}, "Q2": {"t": 381, "s": 55.83, "r": 14.65}, "Q3": {"t": 493, "s": 104.57, "r": 21.21}}, "Jorie Anglo": {"M2601": {"t": 212, "s": 61, "r": 28.77}, "M2602": {"t": 350, "s": 112.5, "r": 32.14}, "M2603": {"t": 387, "s": 102.83, "r": 26.57}, "M2604": {"t": 423, "s": 117.49, "r": 27.78}, "M2605": {"t": 365, "s": 111.16, "r": 30.45}, "M2606": {"t": 369, "s": 91.91, "r": 24.91}, "M2607": {"t": 379, "s": 104.32, "r": 27.53}, "M2608": {"t": 150, "s": 40.49, "r": 26.99}, "Q1": {"t": 949, "s": 276.33, "r": 29.12}, "Q2": {"t": 1157, "s": 320.56, "r": 27.71}, "Q3": {"t": 529, "s": 144.81, "r": 27.37}}, "Joy Balanon": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 106, "s": 12.5, "r": 11.79}, "M2603": {"t": 71, "s": 19.5, "r": 27.46}, "M2604": {"t": 115, "s": 20.5, "r": 17.83}, "M2605": {"t": 123, "s": 30.5, "r": 24.8}, "M2606": {"t": 118, "s": 23, "r": 19.49}, "M2607": {"t": 131, "s": 44.81, "r": 34.21}, "M2608": {"t": 61, "s": 15.5, "r": 25.41}, "Q1": {"t": 177, "s": 32.0, "r": 18.08}, "Q2": {"t": 356, "s": 74.0, "r": 20.79}, "Q3": {"t": 192, "s": 60.31, "r": 31.41}}, "Katrina Teodoro": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 131, "s": 24, "r": 18.32}, "M2603": {"t": 109, "s": 26.5, "r": 24.31}, "M2604": {"t": 108, "s": 13, "r": 12.04}, "M2605": {"t": 111, "s": 30.83, "r": 27.77}, "M2606": {"t": 119, "s": 26.5, "r": 22.27}, "M2607": {"t": 59, "s": 16, "r": 27.12}, "M2608": {"t": 78, "s": 21.33, "r": 27.35}, "Q1": {"t": 240, "s": 50.5, "r": 21.04}, "Q2": {"t": 338, "s": 70.33, "r": 20.81}, "Q3": {"t": 137, "s": 37.33, "r": 27.25}}, "Luiz Taruc": {"M2601": {"t": 171, "s": 33.5, "r": 19.59}, "M2602": {"t": 223, "s": 51.5, "r": 23.09}, "M2603": {"t": 307, "s": 94.83, "r": 30.89}, "M2604": {"t": 402, "s": 88.49, "r": 22.01}, "M2605": {"t": 308, "s": 97.83, "r": 31.76}, "M2606": {"t": 232, "s": 49.66, "r": 21.41}, "M2607": {"t": 260, "s": 49.08, "r": 18.88}, "M2608": {"t": 128, "s": 33.49, "r": 26.16}, "Q1": {"t": 701, "s": 179.83, "r": 25.65}, "Q2": {"t": 942, "s": 235.98, "r": 25.05}, "Q3": {"t": 388, "s": 82.57, "r": 21.28}}, "Manuel Gonzales": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 121, "s": 26, "r": 21.49}, "M2603": {"t": 113, "s": 24.5, "r": 21.68}, "M2604": {"t": 112, "s": 28.5, "r": 25.45}, "M2605": {"t": 93, "s": 27.83, "r": 29.92}, "M2606": {"t": 95, "s": 9, "r": 9.47}, "M2607": {"t": 139, "s": 32.5, "r": 23.38}, "M2608": {"t": 50, "s": 13.5, "r": 27.0}, "Q1": {"t": 234, "s": 50.5, "r": 21.58}, "Q2": {"t": 300, "s": 65.33, "r": 21.78}, "Q3": {"t": 189, "s": 46.0, "r": 24.34}}, "Mia Gregorio": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 123, "s": 13.5, "r": 10.98}, "M2603": {"t": 128, "s": 26.5, "r": 20.7}, "M2604": {"t": 89, "s": 16.83, "r": 18.91}, "M2605": {"t": 103, "s": 15.33, "r": 14.88}, "M2606": {"t": 120, "s": 14, "r": 11.67}, "M2607": {"t": 120, "s": 32, "r": 26.67}, "M2608": {"t": 66, "s": 18.66, "r": 28.27}, "Q1": {"t": 251, "s": 40.0, "r": 15.94}, "Q2": {"t": 312, "s": 46.16, "r": 14.79}, "Q3": {"t": 186, "s": 50.66, "r": 27.24}}, "Nelanie Tinio": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 47, "s": 4, "r": 8.51}, "M2603": {"t": 102, "s": 16.5, "r": 16.18}, "M2604": {"t": 62, "s": 10, "r": 16.13}, "M2605": {"t": 54, "s": 11, "r": 20.37}, "M2606": {"t": 80, "s": 13, "r": 16.25}, "M2607": {"t": 82, "s": 14, "r": 17.07}, "M2608": {"t": 33, "s": 6, "r": 18.18}, "Q1": {"t": 149, "s": 20.5, "r": 13.76}, "Q2": {"t": 196, "s": 34, "r": 17.35}, "Q3": {"t": 115, "s": 20, "r": 17.39}}, "Nick Manlapaz": {"M2601": {"t": 145, "s": 35, "r": 24.14}, "M2602": {"t": 256, "s": 59.5, "r": 23.24}, "M2603": {"t": 402, "s": 117, "r": 29.1}, "M2604": {"t": 331, "s": 76.5, "r": 23.11}, "M2605": {"t": 298, "s": 90.66, "r": 30.42}, "M2606": {"t": 384, "s": 91.08, "r": 23.72}, "M2607": {"t": 340, "s": 80, "r": 23.53}, "M2608": {"t": 152, "s": 36.5, "r": 24.01}, "Q1": {"t": 803, "s": 211.5, "r": 26.34}, "Q2": {"t": 1013, "s": 258.24, "r": 25.49}, "Q3": {"t": 492, "s": 116.5, "r": 23.68}}, "Otzi Padilla": {"M2601": {"t": 112, "s": 12, "r": 10.71}, "M2602": {"t": 327, "s": 75.5, "r": 23.09}, "M2603": {"t": 347, "s": 68, "r": 19.6}, "M2604": {"t": 237, "s": 47.5, "r": 20.04}, "M2605": {"t": 273, "s": 53, "r": 19.41}, "M2606": {"t": 377, "s": 47.41, "r": 12.58}, "M2607": {"t": 331, "s": 73.74, "r": 22.28}, "M2608": {"t": 192, "s": 32.5, "r": 16.93}, "Q1": {"t": 786, "s": 155.5, "r": 19.78}, "Q2": {"t": 887, "s": 147.91, "r": 16.68}, "Q3": {"t": 523, "s": 106.24, "r": 20.31}}, "Paris Lindo": {"M2601": {"t": 199, "s": 31.5, "r": 15.83}, "M2602": {"t": 289, "s": 54.5, "r": 18.86}, "M2603": {"t": 301, "s": 63, "r": 20.93}, "M2604": {"t": 432, "s": 72.16, "r": 16.7}, "M2605": {"t": 266, "s": 52.33, "r": 19.67}, "M2606": {"t": 333, "s": 50.66, "r": 15.21}, "M2607": {"t": 359, "s": 56.32, "r": 15.69}, "M2608": {"t": 104, "s": 21.83, "r": 20.99}, "Q1": {"t": 789, "s": 149.0, "r": 18.88}, "Q2": {"t": 1031, "s": 175.15, "r": 16.99}, "Q3": {"t": 463, "s": 78.15, "r": 16.88}}, "Peejay Frac": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 105, "s": 29, "r": 27.62}, "M2603": {"t": 128, "s": 54, "r": 42.19}, "M2604": {"t": 135, "s": 56.5, "r": 41.85}, "M2605": {"t": 85, "s": 47.5, "r": 55.88}, "M2606": {"t": 111, "s": 53.5, "r": 48.2}, "M2607": {"t": 113, "s": 59.33, "r": 52.5}, "M2608": {"t": 61, "s": 31.83, "r": 52.18}, "Q1": {"t": 233, "s": 83, "r": 35.62}, "Q2": {"t": 331, "s": 157.5, "r": 47.58}, "Q3": {"t": 174, "s": 91.16, "r": 52.39}}, "Serge Valencia": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 87, "s": 9.5, "r": 10.92}, "M2603": {"t": 106, "s": 21.5, "r": 20.28}, "M2604": {"t": 158, "s": 25, "r": 15.82}, "M2605": {"t": 116, "s": 27.5, "r": 23.71}, "M2606": {"t": 134, "s": 10, "r": 7.46}, "M2607": {"t": 98, "s": 0, "r": 0.0}, "M2608": {"t": 17, "s": 0, "r": 0.0}, "Q1": {"t": 193, "s": 31.0, "r": 16.06}, "Q2": {"t": 408, "s": 62.5, "r": 15.32}, "Q3": {"t": 115, "s": 0, "r": 0.0}}, "Sheldon Piana": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 108, "s": 22, "r": 20.37}, "M2603": {"t": 81, "s": 14, "r": 17.28}, "M2604": {"t": 104, "s": 24.5, "r": 23.56}, "M2605": {"t": 57, "s": 18, "r": 31.58}, "M2606": {"t": 75, "s": 13.5, "r": 18.0}, "M2607": {"t": 104, "s": 21.5, "r": 20.67}, "M2608": {"t": 37, "s": 13, "r": 35.14}, "Q1": {"t": 189, "s": 36, "r": 19.05}, "Q2": {"t": 236, "s": 56.0, "r": 23.73}, "Q3": {"t": 141, "s": 34.5, "r": 24.47}}, "Steven Lagania": {"M2601": {"t": 0, "s": 0, "r": null}, "M2602": {"t": 97, "s": 30, "r": 30.93}, "M2603": {"t": 201, "s": 77, "r": 38.31}, "M2604": {"t": 208, "s": 87.5, "r": 42.07}, "M2605": {"t": 178, "s": 82.5, "r": 46.35}, "M2606": {"t": 164, "s": 48, "r": 29.27}, "M2607": {"t": 132, "s": 44.83, "r": 33.96}, "M2608": {"t": 73, "s": 28.83, "r": 39.49}, "Q1": {"t": 298, "s": 107, "r": 35.91}, "Q2": {"t": 550, "s": 218.0, "r": 39.64}, "Q3": {"t": 205, "s": 73.66, "r": 35.93}}}, "rk": {"Harold Arciaga": {"M2601": 1, "M2602": 1, "M2603": 2, "M2604": 3, "M2605": 5, "M2606": 4, "M2607": 15, "M2608": 13, "Q1": 1, "Q2": 3, "Q3": 16}, "Jorie Anglo": {"M2601": 2, "M2602": 2, "M2603": 11, "M2604": 6, "M2605": 11, "M2606": 5, "M2607": 10, "M2608": 16, "Q1": 5, "Q2": 5, "Q3": 13}, "Arla Semsem": {"M2601": 3, "M2602": 5, "M2603": 17, "M2604": 16, "M2605": 22, "M2606": 10, "M2607": 25, "M2608": 17, "Q1": 11, "Q2": 17, "Q3": 22}, "Nick Manlapaz": {"M2601": 4, "M2602": 8, "M2603": 9, "M2604": 13, "M2605": 12, "M2606": 6, "M2607": 17, "M2608": 21, "Q1": 6, "Q2": 8, "Q3": 19}, "Luiz Taruc": {"M2601": 5, "M2602": 9, "M2603": 6, "M2604": 14, "M2605": 9, "M2606": 9, "M2607": 27, "M2608": 18, "Q1": 7, "Q2": 9, "Q3": 24}, "Estie Yalung": {"M2601": 6, "M2602": 22, "M2603": 31, "M2604": 30, "M2605": 27, "M2606": 20, "M2607": 22, "M2608": 22, "Q1": 28, "Q2": 28, "Q3": 21}, "Ferrie Dizon": {"M2601": 7, "M2602": 12, "M2603": 26, "M2604": 24, "M2605": 21, "M2606": 19, "M2607": 20, "M2608": 26, "Q1": 21, "Q2": 23, "Q3": 23}, "Paris Lindo": {"M2601": 8, "M2602": 18, "M2603": 20, "M2604": 25, "M2605": 24, "M2606": 22, "M2607": 30, "M2608": 24, "Q1": 22, "Q2": 25, "Q3": 30}, "Jeannie Alejos": {"M2601": 9, "M2602": 14, "M2603": 15, "M2604": 27, "M2605": 26, "M2606": 25, "M2607": 26, "M2608": 27, "Q1": 17, "Q2": 27, "Q3": 28}, "Otzi Padilla": {"M2601": 10, "M2602": 10, "M2603": 23, "M2604": 19, "M2605": 25, "M2606": 27, "M2607": 21, "M2608": 30, "Q1": 16, "Q2": 26, "Q3": 26}, "Audrey Rivera": {"M2601": 11, "M2602": 11, "M2603": 14, "M2604": 29, "Q1": 18, "Q2": 30}, "Steven Lagania": {"M2602": 3, "M2603": 4, "M2604": 1, "M2605": 2, "M2606": 3, "M2607": 5, "M2608": 5, "Q1": 2, "Q2": 2, "Q3": 4}, "Peejay Frac": {"M2602": 4, "M2603": 1, "M2604": 2, "M2605": 1, "M2606": 1, "M2607": 1, "M2608": 1, "Q1": 3, "Q2": 1, "Q3": 1}, "Aedan Colapo": {"M2602": 6, "M2603": 16, "M2604": 18, "M2605": 3, "M2606": 8, "M2607": 7, "M2608": 2, "Q1": 12, "Q2": 7, "Q3": 3}, "Franz Lacson": {"M2602": 7, "M2603": 3, "M2604": 17, "M2605": 8, "M2606": 26, "M2607": 4, "M2608": 3, "Q1": 4, "Q2": 14, "Q3": 2}, "Manuel Gonzales": {"M2602": 13, "M2603": 19, "M2604": 10, "M2605": 13, "M2606": 30, "M2607": 18, "M2608": 15, "Q1": 13, "Q2": 15, "Q3": 18}, "Sheldon Piana": {"M2602": 15, "M2603": 27, "M2604": 12, "M2605": 10, "M2606": 14, "M2607": 24, "M2608": 7, "Q1": 20, "Q2": 12, "Q3": 17}, "Al Mallari": {"M2602": 16, "M2603": 25, "M2604": 20, "M2605": 17, "M2606": 23, "M2607": 2, "M2608": 10, "Q1": 19, "Q2": 20, "Q3": 5}, "Angelika Bello": {"M2602": 17, "M2603": 29, "M2604": 21, "M2605": 20, "M2606": 21, "M2607": 16, "M2608": 6, "Q1": 25, "Q2": 22, "Q3": 7}, "Katrina Teodoro": {"M2602": 19, "M2603": 13, "M2604": 31, "M2605": 15, "M2606": 7, "M2607": 11, "M2608": 14, "Q1": 14, "Q2": 18, "Q3": 14}, "Cams Garcia": {"M2602": 20, "M2603": 8, "M2604": 7, "M2605": 6, "M2606": 15, "M2607": 8, "M2608": 9, "Q1": 8, "Q2": 6, "Q3": 8}, "Dianne Robles": {"M2602": 21, "M2603": 7, "M2604": 4, "M2605": 18, "M2606": 16, "M2607": 14, "M2608": 4, "Q1": 10, "Q2": 13, "Q3": 10}, "Aira Pizarro": {"M2602": 23, "M2603": 5, "M2604": 8, "M2605": 7, "M2606": 28, "M2607": 13, "M2608": 8, "Q1": 9, "Q2": 10, "Q3": 9}, "Carl Aranas": {"M2602": 24, "M2603": 18, "M2604": 11, "M2605": 28, "M2606": 13, "M2607": 9, "M2608": 12, "Q1": 24, "Q2": 21, "Q3": 12}, "Joy Balanon": {"M2602": 25, "M2603": 10, "M2604": 23, "M2605": 16, "M2606": 11, "M2607": 3, "M2608": 19, "Q1": 23, "Q2": 19, "Q3": 6}, "Mia Gregorio": {"M2602": 26, "M2603": 21, "M2604": 22, "M2605": 29, "M2606": 29, "M2607": 12, "M2608": 11, "Q1": 27, "Q2": 31, "Q3": 15}, "Serge Valencia": {"M2602": 27, "M2603": 22, "M2604": 28, "M2605": 19, "M2606": 31, "M2607": 31, "M2608": 31, "Q1": 26, "Q2": 29, "Q3": 31}, "Creselda Rodriguez": {"M2602": 28, "M2603": 24, "M2604": 5, "M2605": 30, "M2606": 12, "M2607": 6, "M2608": 29, "Q1": 29, "Q2": 16, "Q3": 11}, "Nelanie Tinio": {"M2602": 29, "M2603": 30, "M2604": 26, "M2605": 23, "M2606": 17, "M2607": 28, "M2608": 28, "Q1": 31, "Q2": 24, "Q3": 29}, "Andreth Santos": {"M2602": 30, "M2603": 28, "M2604": 15, "M2605": 4, "M2606": 2, "M2607": 29, "M2608": 20, "Q1": 30, "Q2": 4, "Q3": 27}, "Alain Lintag": {"M2602": 31, "M2603": 12, "M2604": 9, "M2605": 14, "M2606": 18, "M2607": 19, "M2608": 23, "Q1": 15, "Q2": 11, "Q3": 20}, "Jhem Agsalda": {"M2606": 24, "M2607": 23, "M2608": 25, "Q2": 32, "Q3": 25}}, "order": ["Harold Arciaga", "Jorie Anglo", "Peejay Frac", "Nick Manlapaz", "Steven Lagania", "Franz Lacson", "Cams Garcia", "Luiz Taruc", "Aedan Colapo", "Otzi Padilla", "Ferrie Dizon", "Alain Lintag", "Joy Balanon", "Dianne Robles", "Jhem Agsalda", "Arla Semsem", "Aira Pizarro", "Jeannie Alejos", "Angelika Bello", "Manuel Gonzales", "Paris Lindo", "Sheldon Piana", "Al Mallari", "Estie Yalung", "Andreth Santos", "Creselda Rodriguez", "Katrina Teodoro", "Carl Aranas", "Mia Gregorio", "Nelanie Tinio", "Serge Valencia", "Audrey Rivera"], "team": {"Peejay Frac": "CG", "Steven Lagania": "CG", "Harold Arciaga": "XV", "Franz Lacson": "CG", "Jorie Anglo": "XV", "Aedan Colapo": "PIA", "Cams Garcia": "CG", "Aira Pizarro": "CG", "Nick Manlapaz": "XV", "Dianne Robles": "PIA", "Luiz Taruc": "XV", "Joy Balanon": "PIA", "Alain Lintag": "CG", "Andreth Santos": "CG", "Al Mallari": "PIA", "Manuel Gonzales": "PIA", "Sheldon Piana": "PIA", "Katrina Teodoro": "PIA", "Arla Semsem": "XV", "Angelika Bello": "CG", "Carl Aranas": "PIA", "Creselda Rodriguez": "PIA", "Ferrie Dizon": "XV", "Audrey Rivera": "XV", "Otzi Padilla": "XV", "Jhem Agsalda": "XV", "Jeannie Alejos": "XV", "Mia Gregorio": "PIA", "Paris Lindo": "XV", "Estie Yalung": "XV", "Nelanie Tinio": "CG", "Serge Valencia": "CG"}, "months": ["M2601", "M2602", "M2603", "M2604", "M2605", "M2606", "M2607", "M2608"], "ob": {"M2605": {}, "M2606": {}, "M2607": {}, "M2608": {}}, "srm": {"labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug*"], "sales": [492, 1384, 1846.17, 1814.75, 1720.33, 1294.92, 1647.42, 854.33], "gross": [44522.45, 117055.94, 150540.95, 150093.19, 135337.36, 100415.89, 118168.01, 63929.09]}, "era": {"labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug*"], "presale": [25.97, 32.3, 29.24, 29.21, 32.22, 23.41, 22.4, 23.66], "presaleN": ["516/1,987", "955/2,957", "1,053/3,601", "1,087.25/3,723", "1,018/3,160", "840.5/3,591", "817.5/3,649", "357/1,509"], "bau": [29.52, 39.06, 30.5, 28.22, 28.75, 21.36, 13.61, 4.94], "bauN": ["299/1,013", "191/489", "115/377", "127/450", "165/574", "107/501", "43/316", "13/263"]}, "obg": {"labels": ["May", "Jun", "Jul", "Aug*"], "audrey": [1661.94, 1573.99, 4815.25, 1174.31], "mabel": [4560.94, 2032.71, 3132.49, 780.0], "deals": [[8, 11], [4, 5], [6, 8], [3, 4]]}};
+const TEAM = { XV:{label:'XV Presale', s:'XV', v:'#2a78d6'}, CG:{label:'CG Presale', s:'CG', v:'#eb6834'},
+               PIA:{label:'PIA Presale', s:'PIA', v:'#1baf7a'}, OB:{label:'Outbound lane', s:'OB', v:'#c3c2b7'}, NA:{label:'Unattributed', s:'N-A', v:'#c3c2b7'} };
+const fmt$ = n => '$' + n.toLocaleString('en-US',{minimumFractionDigits:2, maximumFractionDigits:2});
+const fmtN = n => n.toLocaleString('en-US');
+const tt = document.getElementById('tt');
+function showTT(e, html){ tt.innerHTML = html; tt.style.opacity = 1;
+  const x = Math.min(e.clientX + 14, window.innerWidth - 320), y = Math.min(e.clientY + 14, window.innerHeight - 140);
+  tt.style.left = x + 'px'; tt.style.top = y + 'px'; }
+function hideTT(){ tt.style.opacity = 0; }
+
+// ---- bridge ladder ----
+const L = [ ['v4 board (retired basis): 2-month sales log ÷ full-year tickets', 6.0, '#c3c2b7', '2,271.5 ÷ 37,555'],
+            ['This board: full-year validated sales ÷ same tickets, matched to Aug 16', 23.2, '#2a78d6', '8,799.64 ÷ 38,004'],
+            ['SR page: adds back 1,970.28 units (grace-churned + departed + 1-day skew)', 28.3, '#898781', '10,769.92 ÷ 38,004'] ];
+document.getElementById('ladder').innerHTML = L.map(l =>
+  `<div class="lrow"><div class="llbl">${l[0].split(':')[0]}</div>
+   <div><div class="lbar" style="width:${l[1]/30*100}%;background:${l[2]}"></div></div>
+   <div class="lval"><b>${l[1].toFixed(1)}%</b> · ${l[3]}</div></div>`).join('');
+
+// ---- power board ----
+const MAXRK = 32, pos = rk => ((rk-1)/(MAXRK-1)*100);
+const TICKS = [1,5,10,15,20,25,32];
+const tickbg = TICKS.map(t => `linear-gradient(#e1e0d9,#e1e0d9) ${pos(t)}% 0 / 1px 100% no-repeat`).join(', ');
+document.getElementById('pticks').innerHTML = TICKS.map(t => `<span style="left:${pos(t)}%">${t}</span>`).join('');
+const stars = new Set(D.power.filter(p => p[3] <= 7 && p[4] <= 7).map(p => p[1]));
+const pEl = document.getElementById('powerChart');
+D.power.forEach(p => {
+  const [prk, name, tm, crk, grk, avg, val, gross, rate] = p;
+  const col = TEAM[tm].v, row = document.createElement('div'); row.className='prow'; row.tabIndex=0;
+  const lo = Math.min(crk,grk), hi = Math.max(crk,grk);
+  row.innerHTML = `<div class="name"><span class="rk">${prk}</span>${name}${stars.has(name)?' ★':''}</div>
+    <div class="plot gridbg" style="--tickbg:${tickbg.replace(/;/g,'')}">
+      <div class="conn" style="left:${pos(lo)}%; width:${Math.max(0,pos(hi)-pos(lo))}%"></div>
+      <div class="pt ring" style="left:${pos(grk)}%; border-color:${col}"></div>
+      <div class="pt" style="left:${pos(crk)}%; background:${col}"></div></div>
+    <div class="pscore">${avg.toFixed(1)}</div>`;
+  const html = `<div class="t">#${prk} ${name} — ${TEAM[tm].label}</div>
+    <div class="d">Conversion seat #${crk} (${rate.toFixed(2)}% full-year)<br>Gross seat #${grk} (${fmt$(gross)} program)<br>Average finish ${avg.toFixed(1)} · tie-break validated ${fmt$(val)}</div>`;
+  row.addEventListener('mousemove', e => showTT(e, html)); row.addEventListener('mouseleave', hideTT);
+  pEl.appendChild(row);
+});
+// headline + tie foot
+const p1 = D.power[0], p2 = D.power[1], p3 = D.power[2];
+document.getElementById('powerH2').textContent =
+  `Combined power board: ${p1[1]} takes #1 at a ${p1[5].toFixed(1)} average finish — ${p2[1]} (#2, ${p2[5].toFixed(1)}) and ${p3[1]} (#3, ${p3[5].toFixed(1)}) close the podium`;
+const ties = {};
+D.power.forEach(p => (ties[p[5]] = ties[p[5]]||[]).push(p));
+const tieTxt = Object.entries(ties).filter(([a,g]) => g.length>1)
+  .map(([a,g]) => g.map(x=>x[1].split(' ')[0]).join(' over ') + ` (${(+a).toFixed(1)})`).join('; ');
+document.getElementById('powerFoot').innerHTML =
+  `Tie-breaks by validated program dollars: ${tieTxt}. Not seated on power: Audrey Rivera (conversion seat #${D.conv.find(c=>c[1]==='Audrey Rivera')[0]} from her inbound era, dollars in the outbound lane), Mabel David (outbound lane), Kianna Sison (departed — sales with no ticket attribution), #N/A (unattributed pending).`;
+
+// ---- conversion board ----
+const conv = D.conv, cMax = Math.max(...conv.map(a => a[5]));
+const convEl = document.getElementById('convChart');
+conv.forEach(a => {
+  const [crk, name, tm, sales, tks, rate, seatType] = a;
+  const col = seatType==='convOnly' ? '#c3c2b7' : TEAM[tm].v;
+  const row = document.createElement('div'); row.className='row'; row.tabIndex=0;
+  const w = Math.max(1.2, rate/cMax*100);
+  row.innerHTML = `<div class="name"><span class="rk">${crk}</span>${name}${stars.has(name)?' ★':''}</div>
+    <div class="track"><div class="bar" style="width:${w*0.72}%;background:${col}"></div>
+    <span class="vlab">${rate.toFixed(1)}%</span></div>`;
+  const era = seatType==='convOnly' ? '<br>Inbound era Jan 1–Apr 19 · outbound lane since Apr 20' : '';
+  const html = `<div class="t">${name} — ${TEAM[tm].label}</div>
+    <div class="d">${rate.toFixed(2)}% full-year conversion<br>${sales.toFixed(2)} validated sales ÷ ${fmtN(tks)} tickets${era}</div>`;
+  row.addEventListener('mousemove', e => showTT(e, html)); row.addEventListener('mouseleave', hideTT);
+  convEl.appendChild(row);
+});
+
+// ---- gross board ----
+const gMax = D.gross[0][3];
+const grossEl = document.getElementById('grossChart');
+D.gross.forEach(a => {
+  const [grk, name, tm, gt, gk, gr, gp, rate] = a;
+  const row = document.createElement('div'); row.className='row'; row.tabIndex=0;
+  const w = Math.max(0.8, gt/gMax*100);
+  row.innerHTML = `<div class="name"><span class="rk">${grk}</span>${name}${stars.has(name)?' ★':''}</div>
+    <div class="track"><div class="bar" style="width:${w*0.66}%;background:${TEAM[tm].v}"></div>
+    <span class="vlab">${fmt$(gt)}</span></div>`;
+  const html = `<div class="t">${name} — ${TEAM[tm].label}</div>
+    <div class="d">Gross ${fmt$(gt)} (program log)<br>Kept ${fmt$(gk)} · Revoked ${fmt$(gr)} · Pending ${fmt$(gp)}<br>Full-year conversion ${rate.toFixed(2)}%</div>`;
+  row.addEventListener('mousemove', e => showTT(e, html)); row.addEventListener('mouseleave', hideTT);
+  grossEl.appendChild(row);
+});
+
+// ---- monthly matrix ----
+const mx = document.getElementById('mxT');
+const Q = {Q1:['M2601','M2602','M2603'], Q2:['M2604','M2605','M2606'], Q3:['M2607','M2608']};
+const colOrder = ['M2601','M2602','M2603','Q1','M2604','M2605','M2606','Q2','M2607','M2608','Q3'];
+const colLbl = {M2601:'Jan',M2602:'Feb',M2603:'Mar',M2604:'Apr',M2605:'May',M2606:'Jun',M2607:'Jul',M2608:'Aug*',Q1:'Q1',Q2:'Q2',Q3:'Q3†'};
+let thead = '<tr><th class="l">Agent</th>' + colOrder.map(c =>
+  `<th class="${c[0]==='Q'?'q':''}">${colLbl[c]}</th>`).join('') + '</tr>';
+const poolSize = {}; colOrder.forEach(c => { poolSize[c] = D.order.filter(a => D.mx[a][c] && D.mx[a][c].r !== null).length; });
+let body = D.order.map(a => {
+  const tm = D.team[a] || 'OB';
+  let cells = colOrder.map(c => {
+    const e = D.mx[a][c];
+    if (!e || e.r === null) {
+      const ob = (a==='Audrey Rivera' && c >= 'M2605' && c[0]==='M') || (a==='Audrey Rivera' && (c==='Q2'||c==='Q3'));
+      return `<td class="c ${c[0]==='Q'?'q':''} muted">${a==='Audrey Rivera' && (c==='M2605'||c==='M2606'||c==='M2607'||c==='M2608'||c==='Q3') ? 'OB' : '—'}</td>`;
+    }
+    const rk = D.rk[a][c], n = poolSize[c];
+    const heat = Math.max(0, 1 - (rk-1)/(n-1||1));
+    const bg = `rgba(${tm==='XV'?'42,120,214':tm==='CG'?'235,104,52':'27,175,122'},${(0.06+heat*0.30).toFixed(2)})`;
+    return `<td class="c ${c[0]==='Q'?'q':''} ${rk===1?'r1':''}" data-a="${a}" data-c="${c}" style="background:${bg}">${rk}</td>`;
+  }).join('');
+  return `<tr><td class="nm"><span class="dot" style="background:${(TEAM[tm]||TEAM.OB).v}"></span>${a}</td>${cells}</tr>`;
+}).join('');
+mx.innerHTML = thead + body;
+mx.addEventListener('mousemove', e => {
+  const td = e.target.closest('td.c[data-a]'); if (!td) { hideTT(); return; }
+  const a = td.dataset.a, c = td.dataset.c, d = D.mx[a][c];
+  showTT(e, `<div class="t">${a} — ${colLbl[c]}</div><div class="d">Seat #${D.rk[a][c]} of ${poolSize[c]}<br>${d.s.toFixed(2)} validated sales ÷ ${fmtN(d.t)} tickets = ${d.r.toFixed(2)}%</div>`);
+});
+mx.addEventListener('mouseleave', hideTT);
+// champions strip
+const champs = colOrder.map(c => {
+  let best = null;
+  D.order.forEach(a => { const e = D.mx[a][c]; if (e && e.r !== null && (!best || e.r > best.r)) best = {a, r:e.r}; });
+  return `<b>${colLbl[c]}</b> ${best.a.split(' ')[0]} ${best.r.toFixed(1)}%`;
+}).join(' · ');
+document.getElementById('champs').innerHTML = 'Seat #1 by column: ' + champs + ' &nbsp;·&nbsp; †Q3 = Jul 1–Aug 16 to date';
+
+// ---- full table ----
+const tb = document.querySelector('#tbl tbody');
+D.tbl.forEach(r => {
+  const [prk, avg, crk, grk, name, tm, rate, srs, tks, ls, gt, gk, gr, gp, kind] = r;
+  const tr = document.createElement('tr'); if (kind !== 'full') tr.className = 'dim';
+  const T = TEAM[tm] || TEAM.NA;
+  const cell = (v, f) => v === null || v === undefined ? '<td class="muted">—</td>' : `<td>${f(v)}</td>`;
+  tr.innerHTML = `<td>${prk??'—'}</td><td>${avg!==null&&avg!==undefined?(+avg).toFixed(1):'—'}</td><td>${crk??'—'}</td><td>${grk??'—'}</td>
+    <td class="l agent" title="${name}${kind==='convOnly'?' — inbound era Jan 1–Apr 19; dollars in the OB lane':kind==='ob'?' — outbound lane (own SOR sheet)':''}"><span class="dot" style="background:${T.v}"></span>${name}${stars.has(name)?' ★':''}${kind==='convOnly'?'<span class="tag">inbound era · $=OB</span>':kind==='ob'?'<span class="tag">OB lane</span>':''}</td>
+    <td class="l">${T.s}</td>
+    ${cell(rate, v=>(+v).toFixed(2)+'%')}${cell(srs, v=>(+v).toFixed(2))}${cell(tks, fmtN)}
+    ${kind==='na' ? '<td class="muted">—</td>' : cell(ls, v=>(+v).toFixed(2))}
+    ${cell(gt, fmt$)}${cell(gk, fmt$)}${gr?`<td>${fmt$(gr)}</td>`:'<td class="muted">—</td>'}${gp?`<td>${fmt$(gp)}</td>`:'<td class="muted">—</td>'}`;
+  tb.appendChild(tr);
+});
+
+// ================= v8 graphs (inline SVG, canon palette) =================
+const NS='http://www.w3.org/2000/svg';
+function sv(tag,at){const e=document.createElementNS(NS,tag);for(const k in at)e.setAttribute(k,at[k]);return e;}
+function txt(x,y,s,fs,fill,anchor,w){const e=sv('text',{x,y,'font-size':fs,fill:fill||'#52514e','text-anchor':anchor||'middle','font-family':'system-ui'});if(w)e.setAttribute('font-weight',w);e.textContent=s;return e;}
+
+// --- SR consolidated: monthly sales bars + gross line ---
+(function(){
+  const d=D.srm, W=900, H=250, L=46, R=64, T=18, B=34, iw=(W-L-R)/d.labels.length;
+  const svg=sv('svg',{viewBox:`0 0 ${W} ${H}`});
+  const smax=2000, gmax=160000;
+  d.labels.forEach((lb,i)=>{
+    const x=L+i*iw+iw*0.18, bw=iw*0.5;
+    const h=(H-T-B)*d.sales[i]/smax, y=H-B-h;
+    svg.appendChild(sv('rect',{x,y,width:bw,height:h,rx:3,fill:i>=6?'#2a78d6':'#c3c2b7'}));
+    svg.appendChild(txt(x+bw/2, y-5, d.sales[i].toLocaleString('en-US'), 10.5, '#52514e'));
+    svg.appendChild(txt(L+i*iw+iw/2, H-B+14, lb, 11, '#898781'));
+    svg.appendChild(txt(L+i*iw+iw/2, H-B+27, '$'+Math.round(d.gross[i]/1000)+'K', 10, '#eb6834'));
+  });
+  const pts=d.labels.map((_,i)=>[L+i*iw+iw/2, H-B-(H-T-B)*d.gross[i]/gmax]);
+  svg.appendChild(sv('polyline',{points:pts.map(p=>p.join(',')).join(' '),fill:'none',stroke:'#eb6834','stroke-width':2}));
+  pts.forEach(p=>svg.appendChild(sv('circle',{cx:p[0],cy:p[1],r:3.2,fill:'#eb6834'})));
+  svg.appendChild(txt(L-6, T+8, 'sales', 10, '#898781', 'end'));
+  svg.appendChild(txt(W-R+58, T+8, 'gross $', 10, '#eb6834', 'end'));
+  document.getElementById('srmChart').appendChild(svg);
+})();
+
+// --- ARIA era-divide chart ---
+(function(){
+  const d=D.era, W=900, H=300, L=50, R=16, T=40, B=42, iw=(W-L-R)/(d.labels.length-1);
+  const svg=sv('svg',{viewBox:`0 0 ${W} ${H}`});
+  const ymax=45, Y=v=>H-B-(H-T-B)*v/ymax, X=i=>L+i*iw;
+  // era bands: Co-Pilot standalone Mar..mid-Jul (idx 2..~6.5) ; ARIA idx 6.5+.. ; pre idx 0..2
+  const jul16 = 6 + 15/31;      // fraction into Jul
+  const aug4  = 7 + 3/31;
+  svg.appendChild(sv('rect',{x:X(2),y:T-6,width:X(jul16)-X(2),height:H-T-B+6,fill:'rgba(42,120,214,0.05)'}));
+  svg.appendChild(sv('rect',{x:X(jul16),y:T-6,width:X(7)-X(jul16)+iw*0,height:H-T-B+6,fill:'rgba(27,175,122,0.07)'}));
+  svg.appendChild(sv('rect',{x:X(7),y:T-6,width:W-R-X(7),height:H-T-B+6,fill:'rgba(27,175,122,0.07)'}));
+  svg.appendChild(sv('line',{x1:X(jul16),y1:T-6,x2:X(jul16),y2:H-B,stroke:'#1baf7a','stroke-width':1.6,'stroke-dasharray':'5,3'}));
+  svg.appendChild(txt(W-R, T-22, 'Jul 16 — Co-Pilot moves inside ARIA', 10.5, '#1baf7a', 'end', 600));
+  svg.appendChild(sv('line',{x1:X(aug4),y1:T-6,x2:X(aug4),y2:H-B,stroke:'#898781','stroke-width':1.2,'stroke-dasharray':'2,3'}));
+  svg.appendChild(txt(W-R, T-10, 'Aug 4 — BAU tester pilot (Johanne + Mike)', 9.5, '#898781', 'end'));
+  svg.appendChild(txt(X(1), T-10, 'Mar 1 — Co-Pilot standalone (6 XV pilot agents)', 9.5, '#2a78d6', 'start'));
+  svg.appendChild(sv('line',{x1:X(2),y1:T-6,x2:X(2),y2:H-B,stroke:'#2a78d6','stroke-width':1.2,'stroke-dasharray':'2,3'}));
+  // gridline + axis
+  [0,10,20,30,40].forEach(v=>{ svg.appendChild(sv('line',{x1:L,y1:Y(v),x2:W-R,y2:Y(v),stroke:'#e1e0d9','stroke-width':v?0.7:1.2}));
+    svg.appendChild(txt(L-7, Y(v)+3.5, v+'%', 10, '#898781', 'end')); });
+  d.labels.forEach((lb,i)=> svg.appendChild(txt(X(i), H-B+16, lb, 11, '#898781')));
+  // lines
+  const line=(vals,col,dash)=>{ svg.appendChild(sv('polyline',{points:vals.map((v,i)=>X(i)+','+Y(v)).join(' '),fill:'none',stroke:col,'stroke-width':2.4,'stroke-dasharray':dash||'none'}));
+    vals.forEach((v,i)=>{ svg.appendChild(sv('circle',{cx:X(i),cy:Y(v),r:3.4,fill:col}));
+      svg.appendChild(txt(X(i), Y(v)-8, v.toFixed(1), 9.5, col)); }); };
+  line(d.presale, '#2a78d6');
+  line(d.bau, '#898781');
+  // tester pilot point
+  svg.appendChild(sv('circle',{cx:X(7),cy:Y(3.4),r:5,fill:'#fcfcfb',stroke:'#eb6834','stroke-width':2.4}));
+  svg.appendChild(txt(X(7)-10, Y(3.4)+4, 'testers 3.4%', 10, '#eb6834', 'end', 600));
+  // series labels
+  svg.appendChild(sv('circle',{cx:X(0)+8,cy:Y(15),r:4,fill:'#2a78d6'}));
+  svg.appendChild(txt(X(0)+16, Y(15)+3.5, 'XV Presale — sells with Co-Pilot → ARIA Copilot', 10.5, '#2a78d6', 'start', 600));
+  svg.appendChild(sv('circle',{cx:X(0)+8,cy:Y(10),r:4,fill:'#898781'}));
+  svg.appendChild(txt(X(0)+16, Y(10)+3.5, 'XV BAU — answers with ARIA standalone', 10.5, '#898781', 'start', 600));
+  // usage annotations in ARIA era
+  svg.appendChild(txt(W-R-4, Y(36), 'ARIA-era usage · strict: testers 42.7% · presales 23.8%', 9.5, '#52514e', 'end'));
+  document.getElementById('eraChart').appendChild(svg);
+})();
+
+// --- ARIA spectrum: presales bands vs tester dots ---
+(function(){
+  const rows = [
+    {lbl:'Strict adoption — all replies', unit:'%', min:7.6, med:23.6, max:45.6, J:20.5, M:51.1},
+    {lbl:'Broad adoption — all replies', unit:'%', min:39.9, med:65.6, max:80.5, J:73.3, M:86.4},
+    {lbl:'Strict adoption — sales context', unit:'%', min:4.6, med:22.9, max:46.3, J:24.1, M:52.1},
+    {lbl:'Conversion — Aug window', unit:'%', min:16.9, med:24.0, max:27.4, J:0.0, M:5.19},
+    {lbl:'$ per presale-routed ticket — pilot week', unit:'$', min:17.66, med:21.62, max:31.01, J:0.0, M:4.44},
+  ];
+  const W=900, RH=44, L=250, R=30, H=rows.length*RH+30;
+  const svg=sv('svg',{viewBox:`0 0 ${W} ${H}`});
+  rows.forEach((r,i)=>{
+    const y=18+i*RH, scale=Math.max(r.max, r.M, r.J)*1.12, X=v=>L+(W-L-R)*v/scale;
+    svg.appendChild(txt(L-10, y+4, r.lbl, 11, '#52514e', 'end'));
+    svg.appendChild(sv('line',{x1:L,y1:y,x2:W-R,y2:y,stroke:'#e1e0d9','stroke-width':1}));
+    svg.appendChild(sv('rect',{x:X(r.min),y:y-6,width:Math.max(2,X(r.max)-X(r.min)),height:12,rx:6,fill:'rgba(42,120,214,0.18)'}));
+    svg.appendChild(sv('line',{x1:X(r.med),y1:y-8,x2:X(r.med),y2:y+8,stroke:'#2a78d6','stroke-width':2}));
+    const f=v=>r.unit==='$'?('$'+v.toFixed(2)):v.toFixed(1)+'%';
+    svg.appendChild(txt(X(r.min), y+20, f(r.min), 9.5, '#2a78d6'));
+    svg.appendChild(txt(X(r.med), y+20, f(r.med), 9.5, '#2a78d6', 'middle', 600));
+    svg.appendChild(txt(X(r.max), y+20, f(r.max), 9.5, '#2a78d6'));
+    // tester dots
+    svg.appendChild(sv('circle',{cx:X(r.J),cy:y,r:5,fill:'#eb6834'}));
+    svg.appendChild(txt(X(r.J), y-11, 'J '+f(r.J), 9.5, '#eb6834', 'middle', 600));
+    svg.appendChild(sv('circle',{cx:X(r.M),cy:y,r:5,fill:'#1F2933'}));
+    svg.appendChild(txt(X(r.M), y-11, 'M '+f(r.M), 9.5, '#1F2933', 'middle', 600));
+  });
+  svg.appendChild(txt(L, H-2, '▮ presales XV-11 band (min → median → max) · ● J = Johanne · ● M = Mike', 10, '#898781', 'start'));
+  document.getElementById('specChart').appendChild(svg);
+})();
+
+// --- Outbound: monthly stacked bars per rep ---
+(function(){
+  const d=D.obg, W=900, H=210, L=46, R=16, T=22, B=30, iw=(W-L-R)/d.labels.length;
+  const svg=sv('svg',{viewBox:`0 0 ${W} ${H}`});
+  const ymax=9000, Y=v=>H-B-(H-T-B)*v/ymax;
+  d.labels.forEach((lb,i)=>{
+    const x=L+i*iw+iw*0.22, bw=iw*0.44;
+    const a=d.audrey[i], m=d.mabel[i];
+    svg.appendChild(sv('rect',{x,y:Y(m),width:bw,height:(H-T-B)*m/ymax,rx:2,fill:'#c3c2b7'}));
+    svg.appendChild(sv('rect',{x,y:Y(m+a),width:bw,height:(H-T-B)*a/ymax,rx:2,fill:'#898781'}));
+    svg.appendChild(txt(x+bw/2, Y(m+a)-6, '$'+(a+m).toLocaleString('en-US',{maximumFractionDigits:0})+(i===3?'+':''), 10.5, '#1F2933', 'middle', 600));
+    svg.appendChild(txt(L+i*iw+iw/2, H-B+15, lb+' · '+d.deals[i][0]+'+'+d.deals[i][1]+' deals', 10.5, '#898781'));
+  });
+  svg.appendChild(txt(L, T-8, '■ Audrey (dark) over ■ Mabel — lane $ per month; Aug is a floor (3 sub amounts pending)', 10, '#52514e', 'start'));
+  document.getElementById('obChart').appendChild(svg);
+})();
+</script>
+</body>
+</html>

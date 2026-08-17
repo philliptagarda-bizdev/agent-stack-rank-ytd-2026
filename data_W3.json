@@ -1,0 +1,141 @@
+{
+  "_comment": "Presales Weekly Report — Data Contract for build.py",
+  "_instructions": "Fill in all null values from Looker. Run: python build.py data_W3.json --deploy",
+  "_rounding": "ROUND ALL DECIMALS UP (ceil) to whole numbers at display/build — counts and conv% — per Phillip Jun 22 2026. e.g. 474.5->475, 6.51%->7%, 18.84%->19%, 1015.5->1016.",
+  "_date_defs": "W3 week = Jun 15-22 (FW2625). MTD = Jun 1-22. Verified live vs XV Conversion dashboard Jun 22: W3 presale 51/784/6.51%, BAU 12/100/12%; MTD presale 474.5/2518/18.84%.",
+
+  "week": {
+    "label":                  "W3 Jun 2026",
+    "filing_week":            "FW2625",
+    "dates":                  "Jun 15–22, 2026",
+    "report_date":            "June 22, 2026",
+    "week_of":                "Jun W3 (Jun 15–22) · pulled Jun 22, 2026 · MTD declared",
+    "month_label":            "Jun W3",
+    "month_short":            "Jun",
+    "month_mtd_range":        "Jun (1–22)",
+    "week_number":            3,
+    "next_month":             "Jul",
+    "prev_week_number":       2,
+    "prev_week_dates":        "Jun 9–15"
+  },
+
+  "xv": {
+    "_source": "Looker XV Presale (Overview+Conversion) + Lead Viewer — Phillip authoritative drop Jun 22 2026",
+    "filing_week_sales":      51,
+    "filing_week_unvalidated":"TRUE 62 / FALSE 13 (Lead Viewer)",
+    "filing_week_tickets":    784,
+    "filing_week_conv_pct":   "6.51",
+    "filing_week_gross":      5749,
+    "mtd_sales":              475,
+    "mtd_unvalidated":        561,
+    "mtd_tickets":            2518,
+    "mtd_conv_pct":           "18.84",
+    "mtd_gross":              53253,
+    "bau_week_sales":         12,
+    "bau_week_tickets":       100,
+    "bau_week_conv_pct":      "12.00",
+    "bau_mtd_sales":          34,
+    "bau_mtd_tickets":        277,
+    "bau_mtd_conv_pct":       "12.27",
+    "prev_week_sales":        120,
+    "prev_week_gross_est":    14314,
+    "prev_week_conv_pct":     "25.73",
+    "prev_week_tickets_est":  468
+  },
+
+  "cg": {
+    "_source": "Looker CG — Overview + Conversion (Phillip drop Jun 22 2026)",
+    "week_sales":             19,
+    "week_tickets":           25,
+    "week_conv_pct":          "30.00",
+    "week_gross":             1197,
+    "mtd_sales":              192,
+    "mtd_tickets":            501,
+    "mtd_conv_pct":           "34.83",
+    "mtd_gross":              10646
+  },
+
+  "pia": {
+    "_source": "Looker PIA — Overview + Conversion (Phillip drop Jun 22 2026)",
+    "week_sales":             4,
+    "week_tickets":           37,
+    "week_conv_pct":          "10.81",
+    "week_gross":             1714,
+    "mtd_sales":              133,
+    "mtd_tickets":            452,
+    "mtd_conv_pct":           "29.31",
+    "mtd_gross":              10936
+  },
+
+  "teams": {
+    "_source": "Looker Teams V2 (Phillip drop Jun 22 2026)",
+    "mtd_leads":              67,
+    "mtd_won":                27,
+    "mtd_conv_pct":           "38.03",
+    "mtd_gross":              11366
+  },
+
+  "outbound": {
+    "_source": "Mabel & Audrey Sheet — Closed Won + MTD Report tabs (synced Jun 22 2026, all tabs reconciled)",
+    "total_deals":            9,
+    "total_gross":            3606.70,
+    "mabel": {
+      "deals":                5,
+      "gross":                2032.71
+    },
+    "audrey": {
+      "deals":                4,
+      "gross":                1573.99
+    },
+    "by_type": {
+      "dipt":      { "deals": 6, "gross": 3510.00 },
+      "vpn_sub":   { "deals": 3, "gross": 96.70 },
+      "teams":     { "deals": 0, "gross": 0.00 }
+    },
+    "prev_week_deals":        3,
+    "prev_week_gross":        1629.72,
+    "contacts": {
+      "total_prod":           2124,
+      "audrey_total":         1087,
+      "mabel_total":          1037,
+      "ncs_new":              461,
+      "ncs_followups":        1417,
+      "dipt_new":             60,
+      "dipt_followups":       173,
+      "warm_leads_june":      13,
+      "pace_needed":          2835,
+      "deficit":              -711
+    }
+  },
+
+  "ytd": {
+    "_instructions": "ytd_total = Jan–May actuals ($676,571) + all Jun MTD brands. monthly_needed = (2000000 - ytd_total) / months_remaining",
+    "jun_mtd_all_brands":     89808,
+    "ytd_total":              766379,
+    "monthly_needed":         176232,
+    "_ytd_calc": "XV 53253 + CG 10646 + PIA 10936 + Teams 11366 + Outbound 3606.70 = 89808 Jun MTD; + Jan-May 676571 = 766379 YTD; (2M-766379)/7 = 176232"
+  },
+
+  "prev": {
+    "_comment": "Previous month locked finals + historical anchors — used for delta calculations",
+    "may_xv_gross":           107697,
+    "may_xv_sales":           1015.5,
+    "may_xv_conv_pct":        27.69,
+    "may_cg_sales":           408,
+    "may_cg_conv_pct":        36.11,
+    "may_pia_sales":          360,
+    "may_pia_conv_pct":       33.93,
+    "may_bau_sales":          30,
+    "may_bau_conv_pct":       21.58,
+    "may_teams_won":          104,
+    "may_teams_conv_pct":     29.97,
+    "may_outbound_deals":     19,
+    "may_outbound_gross":     6222.88,
+    "cg_may_conv_pct":        36.11,
+    "pia_may_conv_pct":       33.93,
+    "w2_xv_sales":            324,
+    "w2_xv_conv_pct":         25.73,
+    "jan_may_teams_gross":    238205,
+    "jan_may_teams_deals":    104
+  }
+}
